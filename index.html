@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script>(function(){if(location.pathname.endsWith('.dc.html'))return;var p=new URLSearchParams(location.search);if(p.get('view')!=='desktop'&&window.matchMedia('(max-width: 899px)').matches){location.replace('index-mobile.html'+location.search);}})();</script>
+<meta name="description" content="Dr. Raulino Brasil, cirurgião bucomaxilofacial especializado em cirurgia facial de alta complexidade. Deep Plane, Deep Neck, blefaroplastia e lip lifting, em estrutura própria em Araranguá e Palhoça (SC).">
+<meta property="og:title" content="Dr. Raulino Brasil | Cirurgia Facial de Alta Complexidade">
+<meta property="og:description" content="Cirurgia e traumatologia bucomaxilofacial dedicada à face, em estrutura própria em Santa Catarina. Fundador do Projeto Leozinho.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="uploads/4bd42797-4d7b-40ea-8556-4035bb1eba4b.jpg">
+<title>Dr. Raulino Brasil | Cirurgia Facial de Alta Complexidade</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/hero-raulino.png">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<style>
+  html { scroll-behavior: smooth; scroll-padding-top: 150px; -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: #FFFFFF; color: #16202B; font-family: 'Poppins', ui-sans-serif, system-ui, sans-serif; -webkit-font-smoothing: antialiased; text-wrap: pretty; }
+  * { box-sizing: border-box; }
+  img, video, iframe { display: block; max-width: 100%; }
+  a { color: #0B63CE; text-decoration: none; }
+  a:hover { color: #094B9E; }
+  :focus-visible { outline: 2px solid #0B63CE; outline-offset: 3px; border-radius: 8px; }
+  summary::-webkit-details-marker { display: none; }
+  @keyframes rbRise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+  @keyframes rbFade { from { opacity: 0; } to { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+  @media (max-width: 1180px) {
+    [data-desktop-nav] { display: none !important; }
+    [data-burger] { display: grid !important; }
+    [data-phone-text] { display: none !important; }
+  }
+  [data-site-header] { transition: background 320ms ease-out, border-color 320ms ease-out, backdrop-filter 320ms ease-out; }
+  @media (max-width: 940px) { [data-header-logo] { height: 68px !important; } }
+  @media (max-width: 1400px) {
+    [data-desktop-nav] { gap: 18px !important; }
+  }
+  @media (max-width: 640px) {
+    [data-wa] { width: 54px !important; height: 54px !important; }
+    [data-wa] svg { width: 28px !important; height: 28px !important; }
+  }
+  a, button { transition: filter 180ms ease-out, opacity 180ms ease-out; }
+  a:hover, button:hover { filter: brightness(1.25); }
+  [data-nav-link] { position: relative; }
+  [data-nav-link]::after { content: ''; position: absolute; left: 0; bottom: -7px; height: 2px; width: 0; background: #7FB2F0; transition: width 280ms cubic-bezier(.16,1,.3,1); }
+  [data-nav-link]:hover::after, [data-nav-link][data-active="true"]::after { width: 100%; }
+  @media (max-width: 720px) {
+    [data-ig] { display: none !important; }
+  }
+  @media (max-width: 940px) {
+    footer a, [data-hero-copy] a, [data-site-header] a[href^="tel"] { min-height: 44px; display: inline-flex; align-items: center; }
+    [data-site-header] a[href^="tel"] { min-width: 44px; justify-content: center; }
+  }
+  [data-proc-card]:hover {
+    background: rgba(11,99,206,.15) !important;
+    transform: translateY(-4px) !important;
+    box-shadow: 0 16px 32px rgba(11,99,206,.2) !important;
+  }
+  @media (max-width: 940px) {
+    header { padding-left: 20px !important; padding-right: 20px !important; }
+    section, footer, div[data-band] { padding-left: 20px !important; padding-right: 20px !important; }
+    section { padding-top: 68px !important; padding-bottom: 68px !important; }
+    [style*="grid-template-columns"]:not([data-keep]) { grid-template-columns: 1fr !important; }
+    [style*="gap: 72px"], [style*="gap: 64px"], [style*="gap: 56px"], [style*="gap: 48px"] { gap: 32px !important; }
+    [data-leo] { padding: 32px 24px !important; }
+    [data-collage] { grid-template-rows: auto !important; }
+    [data-order-first] { order: -1; }
+  }
+  @media (max-width: 940px) and (min-width: 641px) {
+    [data-pair] { grid-template-columns: 1fr 1fr !important; }
+  }
+  @media (max-width: 940px) {
+    [data-hero] { min-height: 80svh !important; padding: 116px 20px 72px !important; align-items: flex-end !important; }
+    [data-hero-img] { object-position: 68% 12% !important; }
+    [data-hero] > div[aria-hidden] { background: linear-gradient(180deg, rgba(7,26,51,.55) 0%, rgba(7,26,51,.78) 46%, rgba(7,26,51,.95) 100%) !important; }
+    [data-hero] h1 { font-size: 36px !important; }
+  [data-academy-fade] { background: linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 62%, rgba(255,255,255,.5) 82%, rgba(255,255,255,0) 100%) !important; }
+  }
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Physician","name":"Dr. Raulino Brasil","alternateName":"Guilherme Henrique Raulino Brasil","medicalSpecialty":"Oral and Maxillofacial Surgery","identifier":"CTBMF-SC 18.398","telephone":"+55-48-3555-0005","areaServed":["Araranguá, SC","Palhoça, SC"],"address":[{"@type":"PostalAddress","addressLocality":"Araranguá","addressRegion":"SC","addressCountry":"BR"},{"@type":"PostalAddress","addressLocality":"Palhoça","addressRegion":"SC","addressCountry":"BR"}]}
+</script>
+</helmet>
+
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="120" rx="18" fill="#071A33"></rect><text x="60" y="74" text-anchor="middle" font-family="Poppins, sans-serif" font-size="40" font-weight="700" fill="#7FB2F0">RB</text></svg>
+</template>
+
+<div ref="{{ rootRef }}" style="background: #FFFFFF; overflow-x: hidden;">
+
+  <header data-site-header="true" style="position: fixed; top: 0; left: 0; right: 0; z-index: 90; padding: 8px 32px; background: {{ headerBg }}; backdrop-filter: {{ headerBlur }}; border-bottom: 1px solid {{ headerBorder }}; display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+    <a href="#inicio" style="display: flex; align-items: center; flex: none;">
+      <img data-header-logo="true" src="assets/logo-novo.png" alt="Clínica Dr. Raulino Brasil" style="height: 160px; width: auto; object-fit: contain;">
+    </a>
+    <nav data-desktop-nav="true" aria-label="Navegação principal" style="display: flex; align-items: center; gap: 18px;">
+        <a data-nav-link="true" data-active="{{ active_inicio }}" href="#inicio" data-en="Home" data-es="Inicio" style="font-size: 13px; font-weight: 500; letter-spacing: .01em; color: rgba(255,255,255,.86); padding-bottom: 2px; transition: color 220ms ease-out;">Início</a>
+<a data-nav-link="true" data-active="{{ active_cirurgias }}" href="#cirurgias" data-en="Procedures" data-es="Procedimientos" style="font-size: 13px; font-weight: 500; letter-spacing: .01em; color: rgba(255,255,255,.86); padding-bottom: 2px; transition: color 220ms ease-out;">Procedimentos</a>
+        <a data-nav-link="true" data-active="{{ active_antes_depois }}" href="#antes-depois" data-en="Results" data-es="Resultados" style="font-size: 13px; font-weight: 500; letter-spacing: .01em; color: rgba(255,255,255,.86); padding-bottom: 2px; transition: color 220ms ease-out;">Resultados</a>
+<a data-nav-link="true" data-active="{{ active_academy }}" href="#academy" data-en="Academy" data-es="Academy" style="font-size: 13px; font-weight: 500; letter-spacing: .01em; color: rgba(255,255,255,.86); padding-bottom: 2px; transition: color 220ms ease-out;">Academy</a>
+        <a data-nav-link="true" href="projeto-leozinho.html" data-en="Leozinho Project" data-es="Proyecto Leozinho" style="font-size: 13px; font-weight: 500; letter-spacing: .01em; color: rgba(255,255,255,.86); padding-bottom: 2px; transition: color 220ms ease-out;">Projeto Leozinho</a>
+    </nav>
+    <div style="display: flex; align-items: center; gap: 12px; flex: none;">
+
+      <a data-ig="true" href="https://www.instagram.com/p/DbGpil2lZH3/?hl=es&img_index=4" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram" style="display: grid; place-items: center; width: 36px; height: 36px; border-radius: 9999px; color: rgba(255,255,255,.86); transition: background 200ms ease-out, transform 200ms cubic-bezier(.16,1,.3,1);">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style="display: block; fill: none; stroke: currentColor; stroke-width: 1.7;"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"></rect><circle cx="12" cy="12" r="4.1"></circle><circle cx="17.1" cy="6.9" r="1.1" style="fill: currentColor; stroke: none;"></circle></svg>
+      </a>
+      <div style="position: relative; flex: none;">
+        <button type="button" onClick="{{ toggleLang }}" aria-expanded="{{ langOpen }}" aria-label="Idioma / Language" style="display: flex; align-items: center; gap: 8px; font-family: inherit; font-size: 13px; font-weight: 600; letter-spacing: .04em; color: #FFFFFF; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.18); border-radius: 9999px; padding: 7px 11px; cursor: pointer;">
+          <sc-if value="{{ isPt }}" hint-placeholder-val="{{ true }}"><svg viewBox="0 0 20 14" width="20" height="14" aria-hidden="true" style="display: block; border-radius: 2px;"><rect width="20" height="14" fill="#009B3A"></rect><path d="M10 2 18 7l-8 5L2 7z" fill="#FFDF00"></path><circle cx="10" cy="7" r="2.6" fill="#002776"></circle></svg><span>PT</span></sc-if>
+          <sc-if value="{{ isEn }}" hint-placeholder-val="{{ false }}"><svg viewBox="0 0 20 14" width="20" height="14" aria-hidden="true" style="display: block; border-radius: 2px;"><rect width="20" height="14" fill="#FFFFFF"></rect><g fill="#B22234"><rect width="20" height="2"></rect><rect y="4" width="20" height="2"></rect><rect y="8" width="20" height="2"></rect><rect y="12" width="20" height="2"></rect></g><rect width="9" height="8" fill="#3C3B6E"></rect></svg><span>EN</span></sc-if>
+          <sc-if value="{{ isEs }}" hint-placeholder-val="{{ false }}"><svg viewBox="0 0 20 14" width="20" height="14" aria-hidden="true" style="display: block; border-radius: 2px;"><rect width="20" height="14" fill="#AA151B"></rect><rect y="3.5" width="20" height="7" fill="#F1BF00"></rect></svg><span>ES</span></sc-if>
+          <span aria-hidden="true" style="font-size: 9px; opacity: .8;">▾</span>
+        </button>
+        <sc-if value="{{ langOpen }}" hint-placeholder-val="{{ false }}">
+          <div role="menu" style="position: absolute; top: calc(100% + 10px); right: 0; width: 196px; background: #FFFFFF; border: 1px solid #E4EAF2; border-radius: 14px; box-shadow: 0 18px 40px rgba(7,26,51,.22); overflow: hidden; opacity: 1;">
+            <button type="button" role="menuitem" onClick="{{ setPt }}" style="width: 100%; display: flex; align-items: center; gap: 11px; font-family: inherit; font-size: 14.5px; font-weight: 500; color: #0F2745; background: transparent; border: none; padding: 13px 16px; cursor: pointer; text-align: left;"><svg viewBox="0 0 20 14" width="20" height="14" aria-hidden="true" style="display: block; border-radius: 2px;"><rect width="20" height="14" fill="#009B3A"></rect><path d="M10 2 18 7l-8 5L2 7z" fill="#FFDF00"></path><circle cx="10" cy="7" r="2.6" fill="#002776"></circle></svg>Português</button>
+            <button type="button" role="menuitem" onClick="{{ setEn }}" style="width: 100%; display: flex; align-items: center; gap: 11px; font-family: inherit; font-size: 14.5px; font-weight: 500; color: #0F2745; background: transparent; border: none; padding: 13px 16px; cursor: pointer; text-align: left; border-top: 1px solid #E4EAF2;"><svg viewBox="0 0 20 14" width="20" height="14" aria-hidden="true" style="display: block; border-radius: 2px;"><rect width="20" height="14" fill="#FFFFFF"></rect><g fill="#B22234"><rect width="20" height="2"></rect><rect y="4" width="20" height="2"></rect><rect y="8" width="20" height="2"></rect><rect y="12" width="20" height="2"></rect></g><rect width="9" height="8" fill="#3C3B6E"></rect></svg>English</button>
+            <button type="button" role="menuitem" onClick="{{ setEs }}" style="width: 100%; display: flex; align-items: center; gap: 11px; font-family: inherit; font-size: 14.5px; font-weight: 500; color: #0F2745; background: transparent; border: none; padding: 13px 16px; cursor: pointer; text-align: left; border-top: 1px solid #E4EAF2;"><svg viewBox="0 0 20 14" width="20" height="14" aria-hidden="true" style="display: block; border-radius: 2px;"><rect width="20" height="14" fill="#AA151B"></rect><rect y="3.5" width="20" height="7" fill="#F1BF00"></rect></svg>Español</button>
+          </div>
+        </sc-if>
+      </div>
+      <a data-cta="true" href="https://wa.me/5548999439007?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20uma%20consulta%20com%20o%20Dr.%20Raulino%20Brasil." target="_blank" rel="noopener" data-en="Book your consultation" data-es="Reserve su consulta" style="display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: #FFFFFF; background: #0B63CE; padding: 11px 18px; border-radius: 9999px; transition: transform 180ms cubic-bezier(.16,1,.3,1), background 180ms ease-out, gap 180ms ease-out;">Marque sua consulta</a>
+      <button type="button" data-burger="true" onClick="{{ toggleNav }}" aria-expanded="{{ navOpen }}" aria-label="Abrir menu de navegação" style="display: none; place-items: center; width: 38px; height: 38px; flex: none; border: 1px solid rgba(255,255,255,.24); border-radius: 9999px; background: rgba(255,255,255,.1); color: #FFFFFF; font-size: 17px; cursor: pointer; font-family: inherit;">≡</button>
+    </div>
+    <sc-if value="{{ navOpen }}" hint-placeholder-val="{{ false }}">
+      <div style="position: absolute; top: 100%; left: 0; right: 0; background: #071A33; border-bottom: 1px solid rgba(255,255,255,.12); display: flex; flex-direction: column; max-height: 78svh; overflow-y: auto; opacity: 1;">
+        <a href="#inicio" onClick="{{ closeNav }}" data-en="Home" data-es="Inicio" style="font-size: 15.5px; font-weight: 500; color: rgba(255,255,255,.9); padding: 15px 24px; border-top: 1px solid rgba(255,255,255,.1);">Início</a>
+        <a href="#sobre" onClick="{{ closeNav }}" data-en="Dr. Raulino" style="font-size: 15.5px; font-weight: 500; color: rgba(255,255,255,.9); padding: 15px 24px; border-top: 1px solid rgba(255,255,255,.1);">Dr. Raulino</a>
+        <a href="#cirurgias" onClick="{{ closeNav }}" data-en="Procedures" data-es="Procedimientos" style="font-size: 15.5px; font-weight: 500; color: rgba(255,255,255,.9); padding: 15px 24px; border-top: 1px solid rgba(255,255,255,.1);">Procedimentos</a>
+        <a href="#antes-depois" onClick="{{ closeNav }}" data-en="Results" data-es="Resultados" style="font-size: 15.5px; font-weight: 500; color: rgba(255,255,255,.9); padding: 15px 24px; border-top: 1px solid rgba(255,255,255,.1);">Resultados</a>
+        <a href="https://www.instagram.com/p/DbGpil2lZH3/?hl=es&img_index=4" target="_blank" rel="noopener" onClick="{{ closeNav }}" data-en="Instagram" style="font-size: 15.5px; font-weight: 500; color: rgba(255,255,255,.9); padding: 15px 24px; border-top: 1px solid rgba(255,255,255,.1);">Instagram</a>
+        <a href="#academy" onClick="{{ closeNav }}" data-en="Academy" data-es="Academy" style="font-size: 15.5px; font-weight: 500; color: rgba(255,255,255,.9); padding: 15px 24px; border-top: 1px solid rgba(255,255,255,.1);">Academy</a>
+        <a href="projeto-leozinho.html" onClick="{{ closeNav }}" data-en="Leozinho Project" data-es="Proyecto Leozinho" style="font-size: 15.5px; font-weight: 500; color: rgba(255,255,255,.9); padding: 15px 24px; border-top: 1px solid rgba(255,255,255,.1);">Projeto Leozinho</a>
+        <a href="tel:+554835550005" onClick="{{ closeNav }}" style="font-size: 15.5px; font-weight: 600; color: #7FB2F0; padding: 15px 24px; border-top: 1px solid rgba(255,255,255,.1);">(48) 3555-0005</a>
+        <div style="padding: 18px 24px 24px; border-top: 1px solid rgba(255,255,255,.1);">
+          <a href="https://wa.me/5548999439007?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20uma%20consulta%20com%20o%20Dr.%20Raulino%20Brasil." target="_blank" rel="noopener" onClick="{{ closeNav }}" data-en="Book your consultation" style="display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 600; color: #FFFFFF; background: #0B63CE; padding: 16px 24px; border-radius: 9999px;">Marque sua consulta</a>
+        </div>
+      </div>
+    </sc-if>
+  </header>
+
+  <section id="inicio" data-hero="true" style="position: relative; display: flex; align-items: center; min-height: 100svh; padding: 196px 32px 96px; background: #071A33; overflow: hidden;">
+    <div data-top-sentinel="true" aria-hidden="true" style="position: absolute; top: 0; left: 0; width: 1px; height: 1px; pointer-events: none;"></div>
+    <img data-hero-img="true" src="assets/hero-raulino.png" alt="Dr. Raulino Brasil" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 72% 40%;">
+    <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(97deg, rgba(7,26,51,.96) 0%, rgba(7,26,51,.9) 30%, rgba(7,26,51,.55) 54%, rgba(7,26,51,.12) 78%, rgba(7,26,51,0) 100%);"></div>
+    <div data-hero-copy="true" style="position: relative; width: 100%; max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column;">
+      <p style="font-size: 13px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #7FB2F0; margin: 0 0 26px; animation: rbFade 600ms ease-out both;">Dr. Raulino Brasil</p>
+      <h1 data-en="A specialist in complex facial surgery." style="font-size: clamp(38px, 4.6vw, 62px); font-weight: 700; line-height: 1.04; letter-spacing: -.03em; color: #FFFFFF; margin: 0 0 26px; max-width: 17ch; text-shadow: 0 2px 18px rgba(7,26,51,.35); animation: rbRise 760ms cubic-bezier(.16,1,.3,1) 60ms both;">Especialista em cirurgia facial de alta complexidade.</h1>
+      <p data-en="Oral and maxillofacial surgery in our own facilities in Araranguá and Palhoça, Santa Catarina, with an individual assessment of every case." style="font-size: 17.5px; line-height: 1.6; color: rgba(255,255,255,.9); margin: 0 0 40px; max-width: 44ch; animation: rbRise 760ms cubic-bezier(.16,1,.3,1) 140ms both;">Clínica especializada em cirurgia e traumatologia bucomaxilofacial, com atuação em Araranguá e Palhoça, Santa Catarina, e avaliação individual de cada caso.</p>
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px; animation: rbRise 760ms cubic-bezier(.16,1,.3,1) 220ms both;">
+        <a data-en="BOOK A CONSULTATION" href="https://wa.me/5548999439007" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; font-size: 13.5px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: #FFFFFF; background: #0B63CE; padding: 19px 34px; border-radius: 9999px; box-shadow: 0 12px 28px rgba(11,99,206,.32); transition: transform 150ms cubic-bezier(.16,1,.3,1), background 150ms ease-out;">Agendar consulta</a>
+        <a data-en="See the surgeries" href="#cirurgias" style="display: inline-flex; align-items: center; gap: 10px; font-size: 15.5px; font-weight: 500; color: #FFFFFF; transition: gap 200ms ease-out, color 200ms ease-out;">Ver as cirurgias <span aria-hidden="true">›</span></a>
+      </div>
+      <a href="#sobre" style="display: inline-flex; align-items: center; gap: 14px; margin-top: 72px; color: rgba(255,255,255,.82); animation: rbFade 900ms ease-out 400ms both;">
+        <span aria-hidden="true" style="width: 44px; height: 44px; flex: none; border-radius: 50%; border: 1px solid rgba(255,255,255,.45); display: grid; place-items: center; font-size: 16px; color: #FFFFFF;">↓</span>
+        <span data-en="Scroll down" data-es="Desplazarse hacia abajo" style="font-size: 13px;">Rolar para baixo</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="sobre" style="position: relative; padding: 120px 32px; background: #FFFFFF; overflow: hidden;">
+    <img src="assets/sobre-bg.jpg" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: left center;">
+    <div style="position: relative; max-width: 1200px; margin: 0 auto;">
+      <div style="max-width: 620px;">
+        <p style="font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #0B63CE; margin: 0 0 20px; animation: rbFade 600ms ease-out both;" data-en="Who he is">Quem é</p>
+        <h2 data-en="Raulino Brasil" data-es="Raulino Brasil" style="font-size: clamp(30px, 3.6vw, 46px); font-weight: 700; line-height: 1.08; letter-spacing: -.03em; color: #16202B; margin: 0 0 26px; animation: rbRise 720ms cubic-bezier(.16,1,.3,1) 60ms both;">Raulino Brasil</h2>
+        <div style="display: flex; flex-direction: column; gap: 16px; animation: rbRise 720ms cubic-bezier(.16,1,.3,1) 140ms both;">
+          <p style="font-size: 16.5px; line-height: 1.7; color: #4C5A67; margin: 0;" data-en="Guilherme Henrique Raulino Brasil is an oral and maxillofacial surgeon, born in Palhoça, Santa Catarina, specialised in highly complex facial procedures such as Deep Plane, Deep Neck, blepharoplasty and lip lifting, with planning based on each patient's individual anatomy.">Guilherme Henrique Raulino Brasil é cirurgião bucomaxilofacial, natural de Palhoça (SC), especializado em procedimentos faciais de alta complexidade, como Deep Plane, Deep Neck, blefaroplastia e lip lifting, com planejamento baseado na anatomia individual de cada paciente.</p>
+          <p style="font-size: 16.5px; line-height: 1.7; color: #4C5A67; margin: 0;" data-en-html="He practises in Palhoça and Araranguá with a multidisciplinary team, belongs to leading entities and research groups in the field and is the founder of the &lt;a href=&quot;#leozinho&quot; style=&quot;font-weight: 600;&quot;&gt;Leozinho Project&lt;/a&gt;, an initiative that has already carried out more than 200 free reconstructive facial surgeries, including a humanitarian mission in Angola.">Atua em Palhoça e Araranguá com uma equipe multidisciplinar, integra importantes entidades e grupos de pesquisa da área e é fundador do <a href="#leozinho" style="font-weight: 600;">Projeto Leozinho</a>, iniciativa que já realizou mais de 200 cirurgias reconstrutivas faciais gratuitas, incluindo uma missão humanitária em Angola.</p>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; animation: rbRise 720ms cubic-bezier(.16,1,.3,1) 220ms both;">
+          <a href="https://wa.me/5548999439007" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 12px; font-size: 15.5px; font-weight: 600; color: #FFFFFF; background: #0B63CE; padding: 17px 32px; border-radius: 9999px; box-shadow: 0 12px 28px rgba(11,99,206,.32); transition: transform 150ms cubic-bezier(.16,1,.3,1), background 150ms ease-out;"><span aria-hidden="true" style="font-size: 17px;">◗</span><span data-en="Book a consultation" data-es="Reservar una consulta">Agendar consulta</span></a>
+          <a href="#cirurgias" style="display: inline-flex; align-items: center; font-size: 15.5px; font-weight: 600; color: #0B63CE; background: #FFFFFF; border: 1px solid #CBD9EA; padding: 17px 32px; border-radius: 9999px; transition: background 150ms ease-out;" data-en="See surgeries" data-es="Ver cirugías">Ver cirurgias</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cirurgias" style="position: relative; min-height: 100svh; display: flex; align-items: center; padding: 140px 32px 96px; background: #071A33; overflow: hidden;">
+    <img src="assets/cirurgias-bg.jpg" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: left center;">
+    <div style="position: relative; max-width: 1200px; margin: 0 auto; width: 100%;">
+      <div style="max-width: 600px;">
+        <p style="font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #7FB2F0; margin: 0 0 18px; animation: rbFade 600ms ease-out both;" data-en="Services">Procedimentos</p>
+        <h2 data-en="Procedures and specialties" style="font-size: clamp(28px, 3.4vw, 42px); font-weight: 700; line-height: 1.08; letter-spacing: -.03em; color: #FFFFFF; margin: 0 0 24px; animation: rbRise 720ms cubic-bezier(.16,1,.3,1) 60ms both;">Procedimentos e especialidades</h2>
+        <div style="display: flex; flex-direction: column; gap: 6px; animation: rbRise 720ms cubic-bezier(.16,1,.3,1) 140ms both;">
+          <div data-proc-card="true" style="padding: 12px 16px; border-radius: 14px; transition: background 240ms ease-out, transform 240ms cubic-bezier(.16,1,.3,1), box-shadow 240ms ease-out;">
+            <h3 data-en="Deep Plane Facelift" style="font-size: 16.5px; font-weight: 600; letter-spacing: -.02em; color: #FFFFFF; margin: 0 0 3px;">Deep Plane Facelift</h3>
+            <p style="font-size: 13.5px; line-height: 1.45; color: rgba(255,255,255,.82); margin: 0;" data-en="Repositions the musculocutaneous unit as a block, rather than pulling the skin.">Reposiciona o conjunto músculo-cutâneo em bloco, sem tracionar a pele.</p>
+          </div>
+          <div data-proc-card="true" style="padding: 12px 16px; border-radius: 14px; transition: background 240ms ease-out, transform 240ms cubic-bezier(.16,1,.3,1), box-shadow 240ms ease-out;">
+            <h3 data-en="Blepharoplasty" style="font-size: 16.5px; font-weight: 600; letter-spacing: -.02em; color: #FFFFFF; margin: 0 0 3px;">Blefaroplastia</h3>
+            <p style="font-size: 13.5px; line-height: 1.45; color: rgba(255,255,255,.82); margin: 0;" data-en="Eyelid surgery that preserves the natural opening of the eyes.">Cirurgia das pálpebras com preservação da abertura natural do olhar.</p>
+          </div>
+          <div data-proc-card="true" style="padding: 12px 16px; border-radius: 14px; transition: background 240ms ease-out, transform 240ms cubic-bezier(.16,1,.3,1), box-shadow 240ms ease-out;">
+            <h3 data-en="Lip Lift" style="font-size: 16.5px; font-weight: 600; letter-spacing: -.02em; color: #FFFFFF; margin: 0 0 3px;">Lip Lift</h3>
+            <p style="font-size: 13.5px; line-height: 1.45; color: rgba(255,255,255,.82); margin: 0;" data-en="Shortens the distance between the base of the nose and the upper lip.">Encurta a distância entre a base do nariz e o lábio superior.</p>
+          </div>
+          <div data-proc-card="true" style="padding: 12px 16px; border-radius: 14px; transition: background 240ms ease-out, transform 240ms cubic-bezier(.16,1,.3,1), box-shadow 240ms ease-out;">
+            <h3 data-en="Reconstructive surgery" style="font-size: 16.5px; font-weight: 600; letter-spacing: -.02em; color: #FFFFFF; margin: 0 0 3px;">Cirurgia reconstrutiva</h3>
+            <p style="font-size: 13.5px; line-height: 1.45; color: rgba(255,255,255,.82); margin: 0;" data-en="Facial reconstruction in cases of deformity, facial paralysis and accident sequelae.">Reconstrução facial em casos de deformidade, paralisia facial e sequelas de acidentes.</p>
+          </div>
+          <div data-proc-card="true" style="padding: 12px 16px; border-radius: 14px; transition: background 240ms ease-out, transform 240ms cubic-bezier(.16,1,.3,1), box-shadow 240ms ease-out;">
+            <h3 data-en="Oral and maxillofacial surgery" style="font-size: 16.5px; font-weight: 600; letter-spacing: -.02em; color: #FFFFFF; margin: 0 0 3px;">Cirurgia bucomaxilofacial</h3>
+            <p style="font-size: 13.5px; line-height: 1.45; color: rgba(255,255,255,.82); margin: 0;" data-en="The founding specialty: surgery of the bones and tissues of the face.">A especialidade de base: cirurgia dos ossos e tecidos da face.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="antes-depois" style="padding: 96px 32px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div data-reveal="true" style="text-align: center; max-width: 760px; margin: 0 auto 44px;">
+        <p style="font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #0B63CE; margin: 0 0 14px;" data-en="Real results">Resultados reais</p>
+        <h2 style="font-size: clamp(30px, 3.6vw, 46px); font-weight: 700; line-height: 1.08; letter-spacing: -.03em; color: #16202B; margin: 0 0 18px;" data-en="Before &amp;amp; After">Antes e Depois</h2>
+        <p style="font-size: 16.5px; line-height: 1.65; color: #4C5A67; margin: 0;" data-en="Records shared with the patients' authorisation. Results vary with anatomy, indication and individual response, the images are not a guarantee of results.">Registros cedidos com autorização dos pacientes. Resultados variam conforme anatomia, indicação e resposta individual, as imagens não representam garantia de resultado.</p>
+      </div>
+      <div data-keep="true" data-pair="true" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 40px;">
+        <figure data-reveal="true" style="margin: 0; border-radius: 20px; overflow: hidden; background: #FFFFFF; box-shadow: 0 2px 10px rgba(22,32,43,.05);">
+          <video src="uploads/2abf2d3d-1c04-4552-be71-e44ce5569848.mp4" controls="controls" muted="muted" loop="loop" playsinline="playsinline" preload="metadata" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; background: #16202B;"></video>
+        </figure>
+        <figure data-reveal="true" data-reveal-delay="60" style="margin: 0; border-radius: 20px; overflow: hidden; background: #FFFFFF; box-shadow: 0 2px 10px rgba(22,32,43,.05);">
+          <video src="uploads/534eefb6-16a9-4d6d-a7af-dbc0c47b71c8.mp4" controls="controls" muted="muted" loop="loop" playsinline="playsinline" preload="metadata" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; background: #16202B;"></video>
+        </figure>
+        <figure data-reveal="true" data-reveal-delay="120" style="margin: 0; border-radius: 20px; overflow: hidden; background: #FFFFFF; box-shadow: 0 2px 10px rgba(22,32,43,.05);">
+          <video src="uploads/e41b9929-7cc1-4377-b0fd-98b4008d7eab.mp4" controls="controls" muted="muted" loop="loop" playsinline="playsinline" preload="metadata" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; background: #16202B;"></video>
+        </figure>
+        <figure data-reveal="true" data-reveal-delay="180" style="margin: 0; border-radius: 20px; overflow: hidden; background: #FFFFFF; box-shadow: 0 2px 10px rgba(22,32,43,.05);">
+          <video src="uploads/a6dff659-3546-42da-9717-b55f1658b136.mp4" controls="controls" muted="muted" loop="loop" playsinline="playsinline" preload="metadata" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; background: #16202B;"></video>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="leozinho" style="background: #071A33; padding: 96px 32px;">
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
+      <figure data-reveal="true" style="margin: 0; position: relative; border-radius: 24px; overflow: hidden; aspect-ratio: 4 / 5;">
+        <img src="assets/hospital-leozinho-conceito.jpg" alt="Projeto conceitual do Hospital do Projeto Leozinho" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
+        <figcaption style="position: absolute; bottom: 0; left: 0; right: 0; font-size: 12px; font-weight: 500; color: rgba(255,255,255,.85); background: linear-gradient(180deg, transparent, rgba(7,26,51,.85)); padding: 34px 18px 14px; text-align: center;">Projeto conceitual da futura estrutura do Hospital Projeto Leozinho</figcaption>
+      </figure>
+      <div data-reveal="true" data-reveal-delay="80">
+        <p style="font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #7FB2F0; margin: 0 0 18px;" data-en="Leozinho Project" data-es="Proyecto Leozinho">Projeto Leozinho</p>
+        <h2 style="font-size: clamp(28px, 3.4vw, 44px); font-weight: 700; line-height: 1.1; letter-spacing: -.03em; color: #FFFFFF; margin: 0 0 22px;" data-en="Rebuilding a face can also mean rebuilding a life.">Reconstruir uma face também pode significar reconstruir uma vida.</h2>
+        <p style="font-size: 16.5px; line-height: 1.7; color: rgba(255,255,255,.9); margin: 0 0 30px; max-width: 46ch;" data-en="The Leozinho Project was created to widen access to facial reconstruction for people facing complex conditions who lack the resources for certain treatments.">O Projeto Leozinho nasceu para ampliar o acesso à reconstrução facial de pessoas que enfrentam condições complexas e não possuem recursos para acessar determinados tratamentos.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 16px; margin-top: 34px;">
+          <a href="projeto-leozinho.html" style="display: inline-flex; align-items: center; gap: 10px; font-size: 15.5px; font-weight: 600; color: #FFFFFF; background: #0B63CE; padding: 17px 32px; border-radius: 9999px; box-shadow: 0 12px 28px rgba(11,99,206,.32); transition: gap 200ms ease-out;" data-en="Discover the Project" data-es="Conoce el Proyecto">Conheça o Projeto <span aria-hidden="true">›</span></a>
+          <!-- CONFIRMAR URL OFICIAL DA CAMPANHA VAKINHA -->
+          <a href="projeto-leozinho.html#apoiar" style="display: inline-flex; align-items: center; font-size: 15.5px; font-weight: 600; color: #FFFFFF; border: 1px solid rgba(255,255,255,.5); padding: 17px 32px; border-radius: 9999px;" data-en="Support the Hospital" data-es="Apoyar el Hospital">Apoie o Hospital</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="academy" style="position: relative; padding: 96px 32px; background: #FFFFFF;">
+    <img src="assets/academy-bg.png" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: right center;">
+    <div data-academy-fade="true" aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 38%, rgba(255,255,255,0) 68%);"></div>
+    <div style="position: relative; max-width: 1200px; margin: 0 auto;">
+      <div data-reveal="true" style="max-width: 640px;">
+        <p style="font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #0B63CE; margin: 0 0 14px;" data-en="Raulino Brasil Academy">Raulino Brasil Academy</p>
+        <h2 style="font-size: clamp(28px, 3.4vw, 44px); font-weight: 700; line-height: 1.1; letter-spacing: -.03em; color: #16202B; margin: 0 0 28px;">Raulino Brasil <span style="font-weight: 400; font-style: italic; color: #0B63CE;">Academy</span></h2>
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <div data-proc-card="true" style="padding: 16px; border-radius: 16px; transition: background 240ms ease-out, transform 240ms cubic-bezier(.16,1,.3,1), box-shadow 240ms ease-out;">
+            <h3 style="font-size: 18px; font-weight: 600; letter-spacing: -.02em; color: #16202B; margin: 0 0 6px;" data-en="Fellowship in person">Fellow presencial</h3>
+            <p style="font-size: 15px; line-height: 1.6; color: #4C5A67; margin: 0;" data-en="Surgical shadowing within the hospital routine, from planning to post-operative care. Limited places.">Acompanhamento cirúrgico dentro da rotina do hospital, do planejamento ao pós-operatório. Vagas limitadas.</p>
+          </div>
+          <div data-proc-card="true" style="padding: 16px; border-radius: 16px; transition: background 240ms ease-out, transform 240ms cubic-bezier(.16,1,.3,1), box-shadow 240ms ease-out;">
+            <h3 style="font-size: 18px; font-weight: 600; letter-spacing: -.02em; color: #16202B; margin: 0 0 6px;" data-en="Practical immersions">Imersões práticas</h3>
+            <p style="font-size: 15px; line-height: 1.6; color: #4C5A67; margin: 0;" data-en="Short in-person immersions in facial anatomy and technique, with dates announced for each group.">Imersões presenciais curtas em anatomia e técnica facial, com datas divulgadas a cada turma.</p>
+          </div>
+          <div data-proc-card="true" style="padding: 16px; border-radius: 16px; transition: background 240ms ease-out, transform 240ms cubic-bezier(.16,1,.3,1), box-shadow 240ms ease-out;">
+            <h3 style="font-size: 18px; font-weight: 600; letter-spacing: -.02em; color: #16202B; margin: 0 0 6px;" data-en="Online courses">Cursos on-line</h3>
+            <p style="font-size: 15px; line-height: 1.6; color: #4C5A67; margin: 0;" data-en="Recorded content and live sessions for those who want to study the technique remotely.">Conteúdo gravado e encontros ao vivo para quem quer estudar a técnica à distância.</p>
+          </div>
+          <div data-proc-card="true" style="padding: 16px; border-radius: 16px; transition: background 240ms ease-out, transform 240ms cubic-bezier(.16,1,.3,1), box-shadow 240ms ease-out;">
+            <h3 style="font-size: 18px; font-weight: 600; letter-spacing: -.02em; color: #16202B; margin: 0 0 6px;" data-en="Research group UNESC">Grupo de pesquisa UNESC</h3>
+            <p style="font-size: 15px; line-height: 1.6; color: #4C5A67; margin: 0;" data-en="Participation in the dentistry research group, linking surgical practice and academic output.">Participação no grupo de pesquisa em odontologia, ligando prática cirúrgica e produção acadêmica.</p>
+          </div>
+        </div>
+        <a href="https://wa.me/5548999557387" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 12px; font-size: 15.5px; font-weight: 600; color: #0B63CE; background: #FFFFFF; border: 1px solid #CBD9EA; padding: 16px 30px; border-radius: 9999px; margin-top: 30px; transition: background 150ms ease-out;"><span aria-hidden="true" style="font-size: 17px;">◗</span><span data-en="Talk to the Academy">Falar com a Academy</span></a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background: #16202B; padding: 64px 32px 32px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div data-keep="true" data-pair="true" style="display: grid; grid-template-columns: 1.25fr .85fr .95fr 1.05fr; gap: 44px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.14);">
+        <div>
+          <div style="margin-bottom: 18px;">
+            <img src="assets/logo-novo.png" alt="Clínica Dr. Raulino Brasil" style="height: 180px; width: auto; object-fit: contain;">
+          </div>
+          <p data-en="Oral and maxillofacial surgery dedicated to the face, in our own facilities in Palhoça and Araranguá, Santa Catarina." style="font-size: 13px; line-height: 1.65; color: rgba(255,255,255,.78); margin: 0 0 18px;">Cirurgia e traumatologia bucomaxilofacial com atuação dedicada à face, em estrutura própria em Palhoça e Araranguá, Santa Catarina.</p>
+          <a href="https://www.instagram.com/p/DbGpil2lZH3/?hl=es&img_index=4" target="_blank" rel="noopener" aria-label="Instagram" style="display: inline-flex; align-items: center; gap: 9px; font-size: 13.5px; color: rgba(255,255,255,.78);"><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" style="display: block; fill: none; stroke: currentColor; stroke-width: 1.7;"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"></rect><circle cx="12" cy="12" r="4.1"></circle><circle cx="17.1" cy="6.9" r="1.1" style="fill: currentColor; stroke: none;"></circle></svg>Instagram</a>
+        </div>
+        <nav aria-label="Navegação do rodapé" style="display: flex; flex-direction: column; gap: 10px;">
+          <p data-en="Pages" style="font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #7FB2F0; margin: 0 0 4px;">Páginas</p>
+          <a href="#sobre" data-en="Dr. Raulino" style="font-size: 14.5px; color: rgba(255,255,255,.82);">Dr. Raulino</a>
+          <a href="#cirurgias" data-en="Procedures" data-es="Procedimientos" style="font-size: 14.5px; color: rgba(255,255,255,.82);">Procedimentos</a>
+          <a href="#antes-depois" data-en="Results" data-es="Resultados" style="font-size: 14.5px; color: rgba(255,255,255,.82);">Resultados</a>
+          <a href="https://www.instagram.com/p/DbGpil2lZH3/?hl=es&img_index=4" target="_blank" rel="noopener" data-en="Instagram" style="font-size: 14.5px; color: rgba(255,255,255,.82);">Instagram</a>
+          <a href="#academy" data-en="Academy" data-es="Academy" style="font-size: 14.5px; color: rgba(255,255,255,.82);">Academy</a>
+          <a href="projeto-leozinho.html" data-en="Leozinho Project" data-es="Proyecto Leozinho" style="font-size: 14.5px; color: rgba(255,255,255,.82);">Projeto Leozinho</a>
+        </nav>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <p data-en="Get in touch" style="font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #7FB2F0; margin: 0 0 4px;">Atendimento</p>
+          <a href="https://wa.me/5548999439007" target="_blank" rel="noopener" data-en="Consultations, (48) 99943-9007" style="font-size: 14.5px; color: rgba(255,255,255,.82);">Consultas, (48) 99943-9007</a>
+          <a href="https://wa.me/5548999557387" target="_blank" rel="noopener" data-en="Academy, (48) 99955-7387" style="font-size: 14.5px; color: rgba(255,255,255,.82);">Academy, (48) 99955-7387</a>
+          <a href="https://wa.me/5548999918930" target="_blank" rel="noopener" data-en="Leozinho Project, (48) 99991-8930" style="font-size: 14.5px; color: rgba(255,255,255,.82);">Projeto Leozinho, (48) 99991-8930</a>
+          <a href="tel:+554835550005" data-en="Main line, (48) 3555-0005" style="font-size: 14.5px; color: rgba(255,255,255,.82);">Institucional, (48) 3555-0005</a>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <p data-en="Locations" style="font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #7FB2F0; margin: 0;">Unidades</p>
+          <div>
+            <p style="font-size: 14.5px; font-weight: 600; color: #FFFFFF; margin: 0 0 3px;">Palhoça / SC</p>
+            <p data-en="Clinic in Pedra Branca, assessments, planning and follow-ups." style="font-size: 13.5px; line-height: 1.55; color: rgba(255,255,255,.78); margin: 0 0 6px;">Clínica no Pedra Branca, avaliações, planejamento e retornos.</p>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Pedra+Branca%2C+Palho%C3%A7a+SC" target="_blank" rel="noopener" data-en="Open in Maps" style="font-size: 13.5px; font-weight: 600; color: #7FB2F0;">Abrir no Maps</a>
+          </div>
+          <div>
+            <p style="font-size: 14.5px; font-weight: 600; color: #FFFFFF; margin: 0 0 3px;">Araranguá / SC</p>
+            <p data-en="Hospital Dia on Rua Portugal, operating room and recovery area." style="font-size: 13.5px; line-height: 1.55; color: rgba(255,255,255,.78); margin: 0 0 6px;">Hospital Dia na Rua Portugal, centro cirúrgico e área de recuperação.</p>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Portugal%2C+Ararangu%C3%A1+SC" target="_blank" rel="noopener" data-en="Open in Maps" style="font-size: 13.5px; font-weight: 600; color: #7FB2F0;">Abrir no Maps</a>
+          </div>
+        </div>
+      </div>
+      <p style="font-size: 12.5px; line-height: 1.75; color: rgba(255,255,255,.66); margin: 26px 0 0; max-width: 92ch;" data-en="This website is informative and educational in nature and follows the principles of the Brazilian Code of Dental Ethics and the advertising rules of the Federal Council of Dentistry (CFO). Its content does not replace an in-person assessment and must never be used for self-diagnosis or self-treatment. Results vary from patient to patient and nothing here constitutes a promise of results. When in doubt, always consult a qualified professional.">Este site tem caráter informativo e educacional e segue os princípios do Código de Ética Odontológica e as normas de publicidade do CFO. O conteúdo não substitui a avaliação presencial e jamais deve ser usado para autodiagnóstico ou autotratamento. Resultados variam conforme cada paciente e nada aqui constitui promessa de resultado. Em caso de dúvida, consulte sempre um profissional habilitado.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; padding-top: 20px;">
+        <p style="font-size: 13px; color: rgba(255,255,255,.7); margin: 0;" data-en="© All rights reserved 2026.">© Todos os direitos reservados 2026.</p>
+        <a href="https://linkefydigital.com.br/" target="_blank" rel="noopener" style="font-size: 13px; color: rgba(255,255,255,.7);">Desenvolvido por Linkefy</a>
+        <p style="font-size: 13px; color: rgba(255,255,255,.7); margin: 0;" data-en="Technical director: Guilherme Henrique Raulino Brasil, CTBMF-SC 18.398. Company registration to be confirmed.">Responsável técnico: Guilherme Henrique Raulino Brasil, CTBMF-SC 18.398. CNPJ a confirmar.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div style="position: fixed; right: 22px; bottom: 22px; z-index: 95; display: flex; flex-direction: column; align-items: center; gap: 12px;">
+    <a href="#inicio" aria-label="Voltar ao topo" style="width: 38px; height: 38px; border-radius: 9999px; background: rgba(255,255,255,.94); border: 1px solid #E4EAF2; display: grid; place-items: center; color: #0B63CE; font-size: 16px; box-shadow: 0 6px 18px rgba(7,26,51,.14); transition: transform 220ms cubic-bezier(.16,1,.3,1);">↑</a>
+    <a data-wa="true" href="https://wa.me/5548999439007?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20uma%20consulta%20com%20o%20Dr.%20Raulino%20Brasil." target="_blank" rel="noopener" aria-label="Falar no WhatsApp" style="width: 60px; height: 60px; border-radius: 9999px; background: #25D366; display: grid; place-items: center; box-shadow: 0 8px 22px rgba(37,211,102,.34); transition: transform 250ms cubic-bezier(.16,1,.3,1), box-shadow 250ms ease-out;">
+      <svg viewBox="0 0 448 512" width="31" height="31" aria-hidden="true" style="display: block; fill: #FFFFFF;"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-34.5-17-39.8-18.9-5.3-2-9.2-3-13.1 3-3.9 6-15.1 18.9-18.5 22.8-3.4 3.9-6.8 4.4-12.3 1.6-5.5-2.8-23.4-8.6-44.5-27.5-16.4-14.7-27.5-32.8-30.9-38.8-3.4-6-.4-9.2 2.4-12.6 3.1-3.8 6.2-6.8 9.3-10.4 2.4-2.8 3.4-4.8 5.3-8.1 1.9-3.3.9-6.2-.5-8.9-1.4-2.7-13.2-31.7-18.1-43.4-4.8-11.4-9.7-9.8-13.3-10-3.4-.2-7.3-.2-11.2-.2-3.9 0-10.2 1.5-15.5 7.5-5.3 6-20.3 19.9-20.3 47.9s20.8 55.1 23.7 58.9c2.9 3.8 40.6 62 98.4 87 58.1 25 68.4 21.3 80.7 20 12.3-1.3 39.7-16.2 45.3-31.9 5.6-15.7 5.6-29.2 3.9-31.9-1.6-2.7-5.6-4.3-11.1-7.1z"></path></svg>
+    </a>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showPending&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Conteúdo&quot;,&quot;label&quot;:&quot;Marcadores de pendência&quot;}}">
+class Component extends DCLogic {
+  state = {
+    navOpen: false,
+    lang: (() => { try { return localStorage.getItem('rb-lang') === 'en' ? 'en' : 'pt'; } catch (e) { return 'pt'; } })(),
+    langOpen: false,
+    scrolled: false,
+    activeId: 'inicio'
+  };
+  navIds = ['inicio', 'sobre', 'cirurgias', 'antes-depois', 'academy'];
+  rootRef = React.createRef();
+  titles = {
+    pt: 'Dr. Raulino Brasil | Cirurgia Facial de Alta Complexidade',
+    en: 'Dr. Raulino Brasil | Complex Facial Surgery'
+  };
+  componentDidMount() {
+    this.reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.addEventListener('keydown', this.onKey);
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    document.addEventListener('click', this.onDocClick, true);
+    this.onScroll();
+    this.applyLang();
+    this.setupReveal();
+    this.setupSpy();
+    this.setupSentinel();
+  }
+
+  onScroll = () => {
+    if (this.rafPending) return;
+    this.rafPending = true;
+    requestAnimationFrame(() => {
+      this.rafPending = false;
+      const y = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      if (y > 24 && !this.state.scrolled) this.setState({ scrolled: true });
+      else if (y === 0 && !this.sentinelHidden && this.state.scrolled) this.setState({ scrolled: false });
+    });
+  };
+
+  setupSentinel() {
+    const el = document.querySelector('[data-top-sentinel]');
+    if (!el || !('IntersectionObserver' in window)) return;
+    this.topIo = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        this.sentinelHidden = !en.isIntersecting;
+        if (this.sentinelHidden !== this.state.scrolled) this.setState({ scrolled: this.sentinelHidden });
+      });
+    }, { threshold: 0, rootMargin: '-28px 0px 0px 0px' });
+    this.topIo.observe(el);
+  }
+
+  onDocClick = (e) => {
+    if (!this.state.langOpen) return;
+    const box = e.target && e.target.closest ? e.target.closest('[aria-label="Idioma / Language"], [role="menu"]') : null;
+    if (!box) this.setState({ langOpen: false });
+  };
+
+  setupSpy() {
+    if (!('IntersectionObserver' in window)) return;
+    const secs = this.navIds.map((id) => document.getElementById(id)).filter(Boolean);
+    this.spy = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        if (en.isIntersecting && en.target.id !== this.state.activeId) this.setState({ activeId: en.target.id });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+    secs.forEach((s) => this.spy.observe(s));
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (!prevState) return;
+    if (prevState.lang !== this.state.lang) this.applyLang();
+  }
+
+  applyLang() {
+    const root = this.rootRef.current;
+    const en = this.state.lang === 'en';
+    if (root) {
+      Array.prototype.forEach.call(root.querySelectorAll('[data-en-html]'), (el) => {
+        if (el.dataset.ptHtml === undefined) el.dataset.ptHtml = el.innerHTML;
+        const next = en ? el.dataset.enHtml : el.dataset.ptHtml;
+        if (el.innerHTML !== next) el.innerHTML = next;
+      });
+      Array.prototype.forEach.call(root.querySelectorAll('[data-en]'), (el) => {
+        if (el.dataset.pt === undefined) el.dataset.pt = el.textContent;
+        const next = en ? el.dataset.en : el.dataset.pt;
+        if (el.textContent !== next) el.textContent = next;
+      });
+    }
+    document.documentElement.lang = en ? 'en' : 'pt-BR';
+    document.title = en ? this.titles.en : this.titles.pt;
+  }
+
+  setLang = (lang) => {
+    try { localStorage.setItem('rb-lang', lang); } catch (e) {}
+    this.setState({ lang: lang, navOpen: false, langOpen: false }, () => this.applyLang());
+  };
+
+  componentWillUnmount() {
+    window.removeEventListener('keydown', this.onKey);
+    window.removeEventListener('scroll', this.onScroll);
+    document.removeEventListener('click', this.onDocClick, true);
+    if (this.spy) this.spy.disconnect();
+    if (this.topIo) this.topIo.disconnect();
+    if (this.safety) clearTimeout(this.safety);
+    if (this.revealAll) {
+      window.removeEventListener('beforeprint', this.revealAll);
+      document.removeEventListener('visibilitychange', this.revealAll);
+    }
+    if (this.io) this.io.disconnect();
+    if (this.cio) this.cio.disconnect();
+  }
+
+  onKey = (e) => {
+    if (e.key !== 'Escape') return;
+    if (this.state.langOpen) this.setState({ langOpen: false });
+    if (this.state.navOpen) this.setState({ navOpen: false });
+  };
+
+  setupReveal() {
+    const root = this.rootRef.current;
+    if (!root || this.reduced || !('IntersectionObserver' in window)) return;
+    const els = Array.prototype.slice.call(root.querySelectorAll('[data-reveal]'));
+    const fold = window.innerHeight * 0.92;
+    els.forEach((el) => {
+      if (el.getBoundingClientRect().top > fold) {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(18px)';
+        el.dataset.hidden = '1';
+      }
+    });
+    this.io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        if (el.dataset.hidden) {
+          el.style.transition = 'opacity 500ms cubic-bezier(.16,1,.3,1), transform 500ms cubic-bezier(.16,1,.3,1)';
+          el.style.transitionDelay = (el.dataset.revealDelay || 0) + 'ms';
+          el.style.opacity = '1';
+          el.style.transform = 'none';
+          delete el.dataset.hidden;
+        }
+        this.io.unobserve(el);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    els.forEach((el) => this.io.observe(el));
+    this.revealAll = () => els.forEach((el) => {
+      if (!el.dataset.hidden) return;
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+      delete el.dataset.hidden;
+    });
+    this.safety = setTimeout(this.revealAll, 1200);
+    window.addEventListener('beforeprint', this.revealAll);
+    document.addEventListener('visibilitychange', this.revealAll);
+
+    const nums = Array.prototype.slice.call(root.querySelectorAll('[data-count]'));
+    this.cio = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        this.countUp(entry.target);
+        this.cio.unobserve(entry.target);
+      });
+    }, { threshold: 0.6 });
+    nums.forEach((n) => this.cio.observe(n));
+  }
+
+  countUp(el) {
+    const target = parseInt(el.dataset.count, 10);
+    if (!target) return;
+    const prefix = el.dataset.prefix || '';
+    const dur = 900;
+    const t0 = performance.now();
+    el.textContent = prefix + '0';
+    const step = (t) => {
+      const p = Math.min(1, (t - t0) / dur);
+      const e = 1 - Math.pow(1 - p, 3);
+      el.textContent = prefix + Math.round(target * e);
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
+  renderVals() {
+    return {
+      rootRef: this.rootRef,
+      navOpen: this.state.navOpen,
+      langOpen: this.state.langOpen,
+      toggleLang: () => this.setState((s) => ({ langOpen: !s.langOpen })),
+      headerBg: (this.state.scrolled || this.state.navOpen) ? 'rgba(7,26,51,.9)' : 'transparent',
+      headerBlur: (this.state.scrolled || this.state.navOpen) ? 'saturate(150%) blur(14px)' : 'none',
+      headerBorder: (this.state.scrolled || this.state.navOpen) ? 'rgba(255,255,255,.12)' : 'transparent',
+      active_inicio: this.state.activeId === 'inicio' ? 'true' : 'false',
+      active_sobre: this.state.activeId === 'sobre' ? 'true' : 'false',
+      active_cirurgias: this.state.activeId === 'cirurgias' ? 'true' : 'false',
+      active_antes_depois: this.state.activeId === 'antes-depois' ? 'true' : 'false',
+      active_instagram: this.state.activeId === 'instagram' ? 'true' : 'false',
+      active_academy: this.state.activeId === 'academy' ? 'true' : 'false',
+      toggleNav: () => this.setState((s) => ({ navOpen: !s.navOpen })),
+      closeNav: () => this.setState({ navOpen: false }),
+      showPending: this.props.showPending ?? true,
+      ptBg: this.state.lang === 'en' ? 'transparent' : '#0B63CE',
+      ptColor: this.state.lang === 'en' ? '#4C5A67' : '#FFFFFF',
+      enBg: this.state.lang === 'en' ? '#0B63CE' : 'transparent',
+      enColor: this.state.lang === 'en' ? '#FFFFFF' : '#4C5A67',
+setPt: () => this.setLang('pt'),
+      setEs: () => this.setLang('es'),
+setEn: () => this.setLang('en'),
+isPt: this.state.lang === 'pt',
+      isEn: this.state.lang === 'en',
+      isEs: this.state.lang === 'es'
+    };
+  }
+}
+</script>
+</body>
+</html>

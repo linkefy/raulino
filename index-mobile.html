@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script>(function(){if(location.pathname.endsWith('.dc.html'))return;var p=new URLSearchParams(location.search);if(p.get('view')!=='mobile'&&window.matchMedia('(min-width: 900px)').matches){location.replace('index.html'+location.search);}})();</script>
+<meta name="description" content="Dr. Raulino Brasil, cirurgião bucomaxilofacial especializado em cirurgia facial de alta complexidade. Deep Plane, Deep Neck, blefaroplastia e lip lifting em Araranguá e Palhoça (SC).">
+<meta property="og:title" content="Dr. Raulino Brasil | Cirurgia Facial de Alta Complexidade">
+<meta property="og:type" content="website">
+<link rel="canonical" href="index.html">
+<title>Dr. Raulino Brasil | Cirurgia Facial de Alta Complexidade</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; -webkit-text-size-adjust: 100%; overflow-x: hidden; }
+  body { margin: 0; background: #FFFFFF; color: #16202B; font-family: 'Poppins', ui-sans-serif, system-ui, sans-serif; -webkit-font-smoothing: antialiased; text-wrap: pretty; overflow-x: hidden; max-width: 100vw; }
+  * { box-sizing: border-box; }
+  img, video { display: block; max-width: 100%; }
+  a { color: #0B63CE; text-decoration: none; }
+  a:hover { color: #094B9E; }
+  :focus-visible { outline: 2px solid #0B63CE; outline-offset: 3px; border-radius: 8px; }
+  [data-tap]:active { transform: scale(.98); }
+  [data-slider]::-webkit-scrollbar { display: none; }
+  [data-slider] { scrollbar-width: none; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
+</style>
+</helmet>
+
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="120" rx="18" fill="#071A33"></rect><text x="60" y="74" text-anchor="middle" font-family="Poppins, sans-serif" font-size="40" font-weight="700" fill="#7FB2F0">RB</text></svg>
+</template>
+
+<div style="background: #FFFFFF; overflow-x: hidden; max-width: 100vw;">
+
+  <header style="position: fixed; top: 0; left: 0; right: 0; z-index: 90; padding: 16px 18px; background: linear-gradient(180deg, rgba(7,26,51,.55) 0%, rgba(7,26,51,0) 100%); display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+    <a href="#topo" style="display: flex; align-items: center;">
+      <img src="assets/logo-branco.png" alt="Raulino Brasil" style="width: 32px; height: 32px; object-fit: contain;">
+    </a>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a data-tap="true" href="#" aria-label="Instagram" style="display: grid; place-items: center; width: 36px; height: 36px; border-radius: 9999px; background: rgba(255,255,255,.14); color: #FFFFFF; transition: background 150ms ease-out;" style-hover="background: rgba(255,255,255,.26);">
+        <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" style="display: block; fill: none; stroke: currentColor; stroke-width: 1.7;"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"></rect><circle cx="12" cy="12" r="4.1"></circle><circle cx="17.1" cy="6.9" r="1.1" style="fill: currentColor; stroke: none;"></circle></svg>
+      </a>
+      <div style="position: relative;">
+        <button type="button" data-tap="true" onClick="{{ toggleLang }}" aria-expanded="{{ langOpen }}" aria-label="Idioma" style="display: flex; align-items: center; gap: 5px; font-family: inherit; font-size: 12px; font-weight: 600; color: #FFFFFF; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.2); border-radius: 9999px; padding: 8px 10px; cursor: pointer;">{{ langFlag }} {{ langCode }}</button>
+        <sc-if value="{{ langOpen }}" hint-placeholder-val="{{ false }}">
+          <div role="menu" style="position: absolute; top: calc(100% + 8px); right: 0; width: 168px; background: #FFFFFF; border: 1px solid #E4EAF2; border-radius: 12px; box-shadow: 0 18px 36px rgba(7,26,51,.22); overflow: hidden;">
+            <button type="button" data-tap="true" onClick="{{ setPt }}" style="width: 100%; display: flex; align-items: center; gap: 9px; font-family: inherit; font-size: 14px; font-weight: 500; color: #0F2745; background: transparent; border: none; padding: 12px 14px; cursor: pointer; text-align: left;">🇧🇷 Português</button>
+            <button type="button" data-tap="true" onClick="{{ setEn }}" style="width: 100%; display: flex; align-items: center; gap: 9px; font-family: inherit; font-size: 14px; font-weight: 500; color: #0F2745; background: transparent; border: none; padding: 12px 14px; cursor: pointer; text-align: left; border-top: 1px solid #E4EAF2;">🇺🇸 English</button>
+            <button type="button" data-tap="true" onClick="{{ setEs }}" style="width: 100%; display: flex; align-items: center; gap: 9px; font-family: inherit; font-size: 14px; font-weight: 500; color: #0F2745; background: transparent; border: none; padding: 12px 14px; cursor: pointer; text-align: left; border-top: 1px solid #E4EAF2;">🇪🇸 Español</button>
+          </div>
+        </sc-if>
+      </div>
+      <button type="button" data-tap="true" onClick="{{ toggleNav }}" aria-expanded="{{ navOpen }}" aria-label="Abrir menu" style="display: grid; place-items: center; width: 38px; height: 38px; border: 1px solid rgba(255,255,255,.24); border-radius: 9999px; background: rgba(255,255,255,.14); color: #FFFFFF; font-size: 17px; cursor: pointer; font-family: inherit; transition: transform 120ms ease-out;">≡</button>
+    </div>
+    <sc-if value="{{ navOpen }}" hint-placeholder-val="{{ false }}">
+      <div style="position: fixed; inset: 0; top: 66px; background: #071A33; z-index: 89; display: flex; flex-direction: column; overflow-y: auto;">
+        <a href="#topo" onClick="{{ closeNav }}" data-en="Home" data-es="Inicio" style="font-size: 17px; font-weight: 600; color: #FFFFFF; padding: 18px 24px; border-bottom: 1px solid rgba(255,255,255,.1);">Início</a>
+        <a href="#quem-e" onClick="{{ closeNav }}" data-en="Dr. Raulino" data-es="Dr. Raulino" style="font-size: 17px; font-weight: 600; color: #FFFFFF; padding: 18px 24px; border-bottom: 1px solid rgba(255,255,255,.1);">Dr. Raulino</a>
+        <a href="#procedimentos" onClick="{{ closeNav }}" data-en="Procedures" data-es="Procedimientos" style="font-size: 17px; font-weight: 600; color: #FFFFFF; padding: 18px 24px; border-bottom: 1px solid rgba(255,255,255,.1);">Procedimentos</a>
+        <a href="#resultados" onClick="{{ closeNav }}" data-en="Results" data-es="Resultados" style="font-size: 17px; font-weight: 600; color: #FFFFFF; padding: 18px 24px; border-bottom: 1px solid rgba(255,255,255,.1);">Resultados</a>
+        <a href="#academy" onClick="{{ closeNav }}" data-en="Raulino Brasil Academy" data-es="Raulino Brasil Academy" style="font-size: 17px; font-weight: 600; color: #FFFFFF; padding: 18px 24px; border-bottom: 1px solid rgba(255,255,255,.1);">Raulino Brasil Academy</a>
+        <a href="projeto-leozinho-mobile.html" onClick="{{ closeNav }}" style="font-size: 17px; font-weight: 600; color: #7FB2F0; padding: 18px 24px; border-bottom: 1px solid rgba(255,255,255,.1);">Projeto Leozinho</a>
+        <div style="display: flex; align-items: center; gap: 16px; padding: 22px 24px;">
+          <a href="https://wa.me/5548999439007" target="_blank" rel="noopener" aria-label="WhatsApp" style="color: #FFFFFF; font-size: 22px;">✆</a>
+          <a href="tel:+554835550005" style="color: rgba(255,255,255,.85); font-size: 14px; font-weight: 600;">(48) 3555-0005</a>
+        </div>
+      </div>
+    </sc-if>
+  </header>
+
+  <section id="topo" style="position: relative;">
+    <div style="position: relative; width: 100%; aspect-ratio: 4 / 5; overflow: hidden;">
+      <img src="assets/raulino-retrato-mobile.jpg" alt="Dr. Raulino Brasil" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 6%;">
+      <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,26,51,.35) 0%, rgba(7,26,51,0) 30%, rgba(7,26,51,0) 62%, rgba(7,26,51,.85) 100%);"></div>
+      <img src="assets/logo-novo.png" alt="Clínica Dr. Raulino Brasil" style="position: absolute; top: 86%; left: 50%; transform: translate(-50%, -50%); width: 76%; max-width: 320px; height: auto; object-fit: contain; filter: drop-shadow(0 8px 24px rgba(7,26,51,.45));">
+    </div>
+    <div style="background: #071A33; padding: 30px 20px 44px;">
+      <p data-en="Dr. Raulino Brasil" data-es="Dr. Raulino Brasil" style="font-size: 12.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #7FB2F0; margin: 0 0 14px;">Dr. Raulino Brasil</p>
+      <h1 data-en="A specialist in complex facial surgery." data-es="Especialista en cirugía facial de alta complejidad." style="font-size: 28px; font-weight: 700; line-height: 1.18; letter-spacing: -.02em; color: #FFFFFF; margin: 0 0 16px;">Especialista em cirurgia facial de alta complexidade.</h1>
+      <p data-en="Oral and maxillofacial surgery with individual assessment, planning and specialized structure in Santa Catarina." data-es="Cirugía bucomaxilofacial con evaluación individual, planificación y estructura especializada en Santa Catarina." style="font-size: 15px; line-height: 1.6; color: rgba(255,255,255,.88); margin: 0 0 26px;">Cirurgia e traumatologia bucomaxilofacial com avaliação individual, planejamento e estrutura especializada em Santa Catarina.</p>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <a data-tap="true" href="https://wa.me/5548999439007?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Raulino%20Brasil." target="_blank" rel="noopener" data-en="BOOK A CONSULTATION" data-es="RESERVAR CONSULTA" style="display: flex; align-items: center; justify-content: center; min-height: 54px; font-size: 14.5px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: #FFFFFF; background: #0B63CE; border-radius: 9999px; transition: transform 120ms ease-out;" style-hover="background: #094B9E;">Agendar consulta</a>
+        <a data-tap="true" href="#procedimentos" data-en="See procedures" data-es="Ver procedimientos" style="display: flex; align-items: center; justify-content: center; min-height: 54px; font-size: 15px; font-weight: 600; color: #FFFFFF; border: 1px solid rgba(255,255,255,.5); border-radius: 9999px; transition: transform 120ms ease-out;" style-hover="background: rgba(255,255,255,.14);">Ver procedimentos</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="quem-e" style="padding: 48px 20px;">
+    <p style="font-size: 12.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #0B63CE; margin: 0 0 14px;">Quem é</p>
+    <h2 style="font-size: 24px; font-weight: 700; line-height: 1.2; letter-spacing: -.02em; color: #16202B; margin: 0 0 20px;">Quem é Raulino Brasil</h2>
+    <img src="assets/raulino-quem-e-mobile.avif" alt="Dr. Raulino Brasil em centro cirúrgico" loading="lazy" style="width: 100%; aspect-ratio: 4 / 3.4; object-fit: cover; object-position: 50% 30%; border-radius: 20px; margin-bottom: 20px;">
+    <p style="font-size: 15px; line-height: 1.7; color: #4C5A67; margin: 0 0 14px;">Guilherme Henrique Raulino Brasil é cirurgião bucomaxilofacial, natural de Palhoça (SC), especializado em procedimentos faciais de alta complexidade, como Deep Plane, Deep Neck, blefaroplastia e lip lifting.</p>
+    <p style="font-size: 15px; line-height: 1.7; color: #4C5A67; margin: 0;">Atua em Palhoça e Araranguá com uma equipe multidisciplinar e é fundador do Projeto Leozinho.</p>
+  </section>
+
+  <section style="background: #F5F9FE; padding: 44px 20px;">
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+      <a data-tap="true" href="https://wa.me/5548999439007?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: space-between; min-height: 56px; padding: 16px 18px; background: #FFFFFF; border: 1px solid #E4EAF2; border-radius: 14px; transition: background 150ms ease-out, border-color 150ms ease-out;" style-hover="background: #EEF4FC;">
+        <span style="font-size: 15px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: #16202B;">Agendamentos</span><span aria-hidden="true" style="color: #0B63CE; font-size: 18px;">›</span>
+      </a>
+      <a data-tap="true" href="#procedimentos" style="display: flex; align-items: center; justify-content: space-between; min-height: 56px; padding: 16px 18px; background: #FFFFFF; border: 1px solid #E4EAF2; border-radius: 14px; transition: background 150ms ease-out, border-color 150ms ease-out;" style-hover="background: #EEF4FC;">
+        <span style="font-size: 15px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: #16202B;">Procedimentos</span><span aria-hidden="true" style="color: #0B63CE; font-size: 18px;">›</span>
+      </a>
+      <a data-tap="true" href="#resultados" style="display: flex; align-items: center; justify-content: space-between; min-height: 56px; padding: 16px 18px; background: #FFFFFF; border: 1px solid #E4EAF2; border-radius: 14px; transition: background 150ms ease-out, border-color 150ms ease-out;" style-hover="background: #EEF4FC;">
+        <span style="font-size: 15px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: #16202B;">Resultados</span><span aria-hidden="true" style="color: #0B63CE; font-size: 18px;">›</span>
+      </a>
+      <a data-tap="true" href="#academy" style="display: flex; align-items: center; justify-content: space-between; min-height: 56px; padding: 16px 18px; background: #FFFFFF; border: 1px solid #E4EAF2; border-radius: 14px; transition: background 150ms ease-out, border-color 150ms ease-out;" style-hover="background: #EEF4FC;">
+        <span style="font-size: 15px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: #16202B;">Academy</span><span aria-hidden="true" style="color: #0B63CE; font-size: 18px;">›</span>
+      </a>
+      <a data-tap="true" href="projeto-leozinho-mobile.html" style="display: flex; align-items: center; justify-content: space-between; min-height: 56px; padding: 16px 18px; background: #FFFFFF; border: 1px solid #E4EAF2; border-radius: 14px; transition: background 150ms ease-out, border-color 150ms ease-out;" style-hover="background: #EEF4FC;">
+        <span style="font-size: 15px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: #16202B;">Projeto Leozinho</span><span aria-hidden="true" style="color: #0B63CE; font-size: 18px;">›</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="procedimentos" style="padding: 48px 20px;">
+    <h2 style="font-size: 24px; font-weight: 700; line-height: 1.2; letter-spacing: -.02em; color: #16202B; margin: 0 0 8px;">Cirurgias faciais</h2>
+    <p style="font-size: 14.5px; line-height: 1.6; color: #4C5A67; margin: 0 0 26px;">Planejamento individual para diferentes necessidades da face.</p>
+    <div style="display: flex; flex-direction: column; gap: 14px;">
+      <a data-tap="true" href="https://wa.me/5548999439007?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20Deep%20Plane%20Facelift." target="_blank" rel="noopener" style="display: flex; gap: 16px; align-items: flex-start; background: #F5F9FE; border-radius: 16px; padding: 20px; transition: background 150ms ease-out, border-color 150ms ease-out;" style-hover="background: #EEF4FC;">
+        <span style="font-size: 13px; font-weight: 700; color: #7FB2F0;">01</span>
+        <div style="flex: 1;"><p style="font-size: 16px; font-weight: 600; color: #16202B; margin: 0 0 6px;">Deep Plane Facelift</p><p style="font-size: 13.5px; line-height: 1.55; color: #4C5A67; margin: 0;">Reposiciona o conjunto músculo-cutâneo em bloco. Pode ser associada ao Deep Neck.</p></div>
+        <span aria-hidden="true" style="color: #0B63CE; font-size: 18px;">›</span>
+      </a>
+      <a data-tap="true" href="https://wa.me/5548999439007?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20blefaroplastia." target="_blank" rel="noopener" style="display: flex; gap: 16px; align-items: flex-start; background: #F5F9FE; border-radius: 16px; padding: 20px; transition: background 150ms ease-out, border-color 150ms ease-out;" style-hover="background: #EEF4FC;">
+        <span style="font-size: 13px; font-weight: 700; color: #7FB2F0;">02</span>
+        <div style="flex: 1;"><p style="font-size: 16px; font-weight: 600; color: #16202B; margin: 0 0 6px;">Blefaroplastia</p><p style="font-size: 13.5px; line-height: 1.55; color: #4C5A67; margin: 0;">Cirurgia das pálpebras, com preservação da abertura natural do olhar.</p></div>
+        <span aria-hidden="true" style="color: #0B63CE; font-size: 18px;">›</span>
+      </a>
+      <a data-tap="true" href="https://wa.me/5548999439007?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20Lip%20Lift." target="_blank" rel="noopener" style="display: flex; gap: 16px; align-items: flex-start; background: #F5F9FE; border-radius: 16px; padding: 20px; transition: background 150ms ease-out, border-color 150ms ease-out;" style-hover="background: #EEF4FC;">
+        <span style="font-size: 13px; font-weight: 700; color: #7FB2F0;">03</span>
+        <div style="flex: 1;"><p style="font-size: 16px; font-weight: 600; color: #16202B; margin: 0 0 6px;">Lip Lift</p><p style="font-size: 13.5px; line-height: 1.55; color: #4C5A67; margin: 0;">Harmonia entre nariz e lábio superior, com incisão desenhada na dobra subnasal.</p></div>
+        <span aria-hidden="true" style="color: #0B63CE; font-size: 18px;">›</span>
+      </a>
+      <a data-tap="true" href="https://wa.me/5548999439007?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20cirurgia%20reconstrutiva." target="_blank" rel="noopener" style="display: flex; gap: 16px; align-items: flex-start; background: #F5F9FE; border-radius: 16px; padding: 20px; transition: background 150ms ease-out, border-color 150ms ease-out;" style-hover="background: #EEF4FC;">
+        <span style="font-size: 13px; font-weight: 700; color: #7FB2F0;">04</span>
+        <div style="flex: 1;"><p style="font-size: 16px; font-weight: 600; color: #16202B; margin: 0 0 6px;">Cirurgia reconstrutiva</p><p style="font-size: 13.5px; line-height: 1.55; color: #4C5A67; margin: 0;">Reconstrução facial em deformidade, paralisia facial, síndromes raras e sequelas.</p></div>
+        <span aria-hidden="true" style="color: #0B63CE; font-size: 18px;">›</span>
+      </a>
+      <a data-tap="true" href="https://wa.me/5548999439007?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20cirurgia%20bucomaxilofacial." target="_blank" rel="noopener" style="display: flex; gap: 16px; align-items: flex-start; background: #F5F9FE; border-radius: 16px; padding: 20px; transition: background 150ms ease-out, border-color 150ms ease-out;" style-hover="background: #EEF4FC;">
+        <span style="font-size: 13px; font-weight: 700; color: #7FB2F0;">05</span>
+        <div style="flex: 1;"><p style="font-size: 16px; font-weight: 600; color: #16202B; margin: 0 0 6px;">Cirurgia bucomaxilofacial</p><p style="font-size: 13.5px; line-height: 1.55; color: #4C5A67; margin: 0;">A especialidade de base: cirurgia dos ossos e tecidos da face.</p></div>
+        <span aria-hidden="true" style="color: #0B63CE; font-size: 18px;">›</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="resultados" style="background: #F5F9FE; padding: 48px 0;">
+    <div style="padding: 0 20px;">
+      <p style="font-size: 12.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #0B63CE; margin: 0 0 14px;">Resultados reais</p>
+      <h2 style="font-size: 22px; font-weight: 700; letter-spacing: -.02em; color: #16202B; margin: 0 0 6px;">Antes e Depois</h2>
+      <p style="font-size: 13px; line-height: 1.55; color: #4C5A67; margin: 0 0 22px;">Registros cedidos com autorização dos pacientes. Resultados variam conforme anatomia e resposta individual.</p>
+    </div>
+    <div ref="{{ resultsRef }}" onScroll="{{ onResultsScroll }}" data-slider="true" style="display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 20px 16px; -webkit-overflow-scrolling: touch;">
+      <video src="uploads/2abf2d3d-1c04-4552-be71-e44ce5569848.mp4" controls="controls" muted="muted" playsinline="playsinline" preload="metadata" style="flex: 0 0 82%; scroll-snap-align: start; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 18px; background: #16202B;"></video>
+      <video src="uploads/534eefb6-16a9-4d6d-a7af-dbc0c47b71c8.mp4" controls="controls" muted="muted" playsinline="playsinline" preload="metadata" style="flex: 0 0 82%; scroll-snap-align: start; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 18px; background: #16202B;"></video>
+      <video src="uploads/e41b9929-7cc1-4377-b0fd-98b4008d7eab.mp4" controls="controls" muted="muted" playsinline="playsinline" preload="metadata" style="flex: 0 0 82%; scroll-snap-align: start; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 18px; background: #16202B;"></video>
+      <video src="uploads/a6dff659-3546-42da-9717-b55f1658b136.mp4" controls="controls" muted="muted" playsinline="playsinline" preload="metadata" style="flex: 0 0 82%; scroll-snap-align: start; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 18px; background: #16202B;"></video>
+    </div>
+    <p style="text-align: center; font-size: 13px; font-weight: 600; color: #7A8794; margin: 4px 0 0;">{{ resultsCounter }} / 04</p>
+  </section>
+
+  <section id="academy" style="position: relative; padding: 56px 20px; background: #071A33; overflow: hidden;">
+    <img src="assets/academy-bg-mobile.avif" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .35;">
+    <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,26,51,.75) 0%, rgba(7,26,51,.94) 100%);"></div>
+    <div style="position: relative;">
+      <p style="font-size: 12.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #7FB2F0; margin: 0 0 16px;">Raulino Brasil Academy</p>
+      <h2 style="font-size: 24px; font-weight: 700; line-height: 1.2; letter-spacing: -.02em; color: #FFFFFF; margin: 0 0 16px;">Conhecimento construído na prática.</h2>
+      <p style="font-size: 15px; line-height: 1.65; color: rgba(255,255,255,.88); margin: 0 0 26px;">Fellowship presencial, imersões práticas e cursos on-line em anatomia e técnica facial.</p>
+      <a data-tap="true" href="https://wa.me/5548999557387?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20Raulino%20Brasil%20Academy." target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; min-height: 54px; font-size: 15px; font-weight: 600; color: #0B63CE; background: #FFFFFF; border-radius: 9999px; transition: background 150ms ease-out, border-color 150ms ease-out;" style-hover="background: #EEF4FC;">Conheça a Academy</a>
+    </div>
+  </section>
+
+  <section id="leozinho" style="padding: 56px 20px;">
+    <p style="font-size: 12.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #0B63CE; margin: 0 0 16px;">Projeto Leozinho</p>
+    <h2 style="font-size: 24px; font-weight: 700; line-height: 1.22; letter-spacing: -.02em; color: #16202B; margin: 0 0 18px;">Reconstruir uma face também pode significar reconstruir uma vida.</h2>
+    <p style="font-size: 15px; line-height: 1.7; color: #4C5A67; margin: 0 0 16px;">O Projeto Leozinho nasceu para ampliar o acesso à reconstrução facial de pessoas que enfrentam condições complexas e não possuem recursos para determinados tratamentos.</p>
+    <p style="font-size: 15px; line-height: 1.7; color: #4C5A67; margin: 0 0 28px;">Léo foi o primeiro paciente operado pela iniciativa. Sua trajetória marcou profundamente o projeto e, como forma de homenagem e de manter viva sua lembrança, a iniciativa passou a levar o nome Projeto Leozinho.</p>
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <a data-tap="true" href="projeto-leozinho-mobile.html" style="display: flex; align-items: center; justify-content: center; min-height: 54px; font-size: 15px; font-weight: 600; color: #FFFFFF; background: #0B63CE; border-radius: 9999px; transition: background 150ms ease-out, border-color 150ms ease-out;" style-hover="background: #094B9E;">Conheça o Projeto</a>
+      <!-- CONFIRMAR URL OFICIAL DA CAMPANHA VAKINHA -->
+      <a data-tap="true" href="projeto-leozinho-mobile.html#apoiar" style="display: flex; align-items: center; justify-content: center; min-height: 54px; font-size: 15px; font-weight: 600; color: #0B63CE; border: 1px solid #CBD9EA; border-radius: 9999px; transition: background 150ms ease-out, border-color 150ms ease-out;" style-hover="background: #EEF4FC;">Apoie o Projeto</a>
+    </div>
+  </section>
+
+  <footer style="background: #16202B; padding: 44px 20px 28px;">
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
+      <img src="assets/logo-branco.png" alt="" style="width: 34px; height: 34px; object-fit: contain;">
+      <span style="font-size: 16px; font-weight: 700; color: #FFFFFF;">Raulino Brasil</span>
+    </div>
+    <p style="font-size: 13px; color: rgba(255,255,255,.78); margin: 0 0 22px;">Cirurgia Facial de Alta Complexidade</p>
+    <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 22px;">
+      <a href="#quem-e" style="font-size: 14px; color: rgba(255,255,255,.82);">Dr. Raulino</a>
+      <a href="#procedimentos" style="font-size: 14px; color: rgba(255,255,255,.82);">Procedimentos</a>
+      <a href="#resultados" style="font-size: 14px; color: rgba(255,255,255,.82);">Resultados</a>
+      <a href="#academy" style="font-size: 14px; color: rgba(255,255,255,.82);">Academy</a>
+      <a href="projeto-leozinho-mobile.html" style="font-size: 14px; color: rgba(255,255,255,.82);">Projeto Leozinho</a>
+      <a href="https://wa.me/5548999439007" target="_blank" rel="noopener" style="font-size: 14px; color: rgba(255,255,255,.82);">Consultas, (48) 99943-9007</a>
+      <a href="tel:+554835550005" style="font-size: 14px; color: rgba(255,255,255,.82);">Institucional, (48) 3555-0005</a>
+    </div>
+    <p style="font-size: 12px; line-height: 1.6; color: rgba(255,255,255,.6); margin: 0 0 16px;">Responsável técnico: Guilherme Henrique Raulino Brasil, CTBMF-SC 18.398.</p>
+    <a href="https://linkefydigital.com.br/" target="_blank" rel="noopener" style="font-size: 13px; color: rgba(255,255,255,.7); display: block; margin-bottom: 10px;">Desenvolvido por Linkefy</a>
+    <a href="index.html?view=desktop" style="font-size: 12.5px; color: rgba(255,255,255,.55); display: inline-block; margin-bottom: 12px;">Ver versão desktop</a>
+    <p style="font-size: 12.5px; color: rgba(255,255,255,.6); margin: 0;">© Dr. Raulino Brasil. Todos os direitos reservados 2026.</p>
+  </footer>
+
+  <a data-tap="true" href="https://wa.me/5548999439007?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20uma%20consulta." target="_blank" rel="noopener" aria-label="Falar no WhatsApp" style="position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 95; width: 54px; height: 54px; border-radius: 9999px; background: #25D366; display: grid; place-items: center; box-shadow: 0 8px 22px rgba(37,211,102,.34); transition: transform 150ms ease-out;" style-hover="background: #1FB955;">
+    <svg viewBox="0 0 448 512" width="27" height="27" aria-hidden="true" style="fill: #FFFFFF;"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-34.5-17-39.8-18.9-5.3-2-9.2-3-13.1 3-3.9 6-15.1 18.9-18.5 22.8-3.4 3.9-6.8 4.4-12.3 1.6-5.5-2.8-23.4-8.6-44.5-27.5-16.4-14.7-27.5-32.8-30.9-38.8-3.4-6-.4-9.2 2.4-12.6 3.1-3.8 6.2-6.8 9.3-10.4 2.4-2.8 3.4-4.8 5.3-8.1 1.9-3.3.9-6.2-.5-8.9-1.4-2.7-13.2-31.7-18.1-43.4-4.8-11.4-9.7-9.8-13.3-10-3.4-.2-7.3-.2-11.2-.2-3.9 0-10.2 1.5-15.5 7.5-5.3 6-20.3 19.9-20.3 47.9s20.8 55.1 23.7 58.9c2.9 3.8 40.6 62 98.4 87 58.1 25 68.4 21.3 80.7 20 12.3-1.3 39.7-16.2 45.3-31.9 5.6-15.7 5.6-29.2 3.9-31.9-1.6-2.7-5.6-4.3-11.1-7.1z"></path></svg>
+  </a>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = {
+    navOpen: false,
+    resultsCounter: '01',
+    langOpen: false,
+    lang: (() => { try { return localStorage.getItem('rb-lang') || 'pt'; } catch (e) { return 'pt'; } })()
+  };
+  rootRef = React.createRef();
+  toggleNav = () => this.setState((s) => ({ navOpen: !s.navOpen }));
+  closeNav = () => this.setState({ navOpen: false });
+  resultsRef = { current: null };
+  onResultsScroll = (e) => {
+    const el = e.target;
+    const idx = Math.round(el.scrollLeft / (el.scrollWidth / 4)) + 1;
+    const n = Math.min(4, Math.max(1, idx));
+    const label = n < 10 ? '0' + n : '' + n;
+    if (label !== this.state.resultsCounter) this.setState({ resultsCounter: label });
+  };
+  componentDidMount() {
+    this.applyLang();
+    document.addEventListener('click', this.onDocClick, true);
+  }
+  componentWillUnmount() {
+    document.removeEventListener('click', this.onDocClick, true);
+  }
+  onDocClick = (e) => {
+    if (!this.state.langOpen) return;
+    const box = e.target && e.target.closest ? e.target.closest('[aria-label="Idioma"], [role="menu"]') : null;
+    if (!box) this.setState({ langOpen: false });
+  };
+  applyLang() {
+    const en = this.state.lang === 'en';
+    const es = this.state.lang === 'es';
+    document.querySelectorAll('[data-en]').forEach((el) => {
+      if (el.dataset.pt === undefined) el.dataset.pt = el.textContent;
+      const next = en ? el.dataset.en : (es ? (el.dataset.es || el.dataset.en) : el.dataset.pt);
+      if (el.textContent !== next) el.textContent = next;
+    });
+    document.documentElement.lang = en ? 'en' : (es ? 'es' : 'pt-BR');
+  }
+  toggleLang = () => this.setState((s) => ({ langOpen: !s.langOpen }));
+  setLang = (lang) => {
+    try { localStorage.setItem('rb-lang', lang); } catch (e) {}
+    this.setState({ lang: lang, langOpen: false, navOpen: false }, () => this.applyLang());
+  };
+  renderVals() {
+    return {
+      navOpen: this.state.navOpen,
+      toggleNav: this.toggleNav,
+      closeNav: this.closeNav,
+      resultsRef: this.resultsRef,
+      onResultsScroll: this.onResultsScroll,
+      resultsCounter: this.state.resultsCounter,
+      langOpen: this.state.langOpen,
+      toggleLang: this.toggleLang,
+      setPt: () => this.setLang('pt'),
+      setEn: () => this.setLang('en'),
+      setEs: () => this.setLang('es'),
+      langFlag: this.state.lang === 'en' ? '🇺🇸' : (this.state.lang === 'es' ? '🇪🇸' : '🇧🇷'),
+      langCode: this.state.lang === 'en' ? 'EN' : (this.state.lang === 'es' ? 'ES' : 'PT')
+    };
+  }
+}
+</script>
+</body>
+</html>

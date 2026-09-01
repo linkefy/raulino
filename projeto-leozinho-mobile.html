@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script>(function(){var p=new URLSearchParams(location.search);if(p.get('view')!=='mobile'&&window.matchMedia('(min-width: 900px)').matches){location.replace('projeto-leozinho.html'+location.search);}})();</script>
+<meta name="description" content="Projeto Leozinho: reconstrução facial gratuita para pacientes com condições complexas, idealizado pelo Dr. Raulino Brasil.">
+<meta property="og:title" content="Projeto Leozinho | Reconstrução Facial e Impacto Social">
+<meta property="og:type" content="website">
+<link rel="canonical" href="projeto-leozinho.html">
+<title>Projeto Leozinho | Reconstrução Facial e Impacto Social</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; -webkit-text-size-adjust: 100%; overflow-x: hidden; }
+  body { margin: 0; background: #FFFFFF; color: #16202B; font-family: 'Poppins', ui-sans-serif, system-ui, sans-serif; -webkit-font-smoothing: antialiased; text-wrap: pretty; overflow-x: hidden; max-width: 100vw; }
+  * { box-sizing: border-box; }
+  img, video { display: block; max-width: 100%; }
+  a { color: #0B63CE; text-decoration: none; }
+  :focus-visible { outline: 2px solid #0B63CE; outline-offset: 3px; border-radius: 8px; }
+  [data-tap]:active { transform: scale(.98); }
+  [data-slider]::-webkit-scrollbar { display: none; }
+  [data-slider] { scrollbar-width: none; }
+  summary::-webkit-details-marker { display: none; }
+  [data-faq] summary::after { content: '+'; }
+  [data-faq][open] summary::after { content: '−'; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Projeto Leozinho","foundingDate":"2021","founder":{"@type":"Person","name":"Guilherme Henrique Raulino Brasil"},"description":"Projeto social de reconstrução facial idealizado pelo Dr. Raulino Brasil.","areaServed":"BR"}
+</script>
+</helmet>
+
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="120" rx="18" fill="#071A33"></rect><text x="60" y="74" text-anchor="middle" font-family="Poppins, sans-serif" font-size="34" font-weight="700" fill="#7FB2F0">PL</text></svg>
+</template>
+
+<div style="background: #FFFFFF; overflow-x: hidden; max-width: 100vw;">
+
+  <header style="position: fixed; top: 0; left: 0; right: 0; z-index: 90; padding: 16px 18px; background: linear-gradient(180deg, rgba(7,26,51,.55) 0%, rgba(7,26,51,0) 100%); display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+    <a href="index-mobile.html" style="display: flex; align-items: center;">
+      <img src="assets/logo-branco.png" alt="Raulino Brasil" style="width: 32px; height: 32px; object-fit: contain;">
+    </a>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a data-tap="true" href="https://www.instagram.com/p/DbGpil2lZH3/?hl=es&img_index=4" target="_blank" rel="noopener" aria-label="Instagram" style="display: grid; place-items: center; width: 36px; height: 36px; border-radius: 9999px; background: rgba(255,255,255,.14); color: #FFFFFF;">
+        <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" style="display: block; fill: none; stroke: currentColor; stroke-width: 1.7;"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"></rect><circle cx="12" cy="12" r="4.1"></circle><circle cx="17.1" cy="6.9" r="1.1" style="fill: currentColor; stroke: none;"></circle></svg>
+      </a>
+      <button type="button" data-tap="true" onClick="{{ toggleNav }}" aria-expanded="{{ navOpen }}" aria-label="Abrir menu" style="display: grid; place-items: center; width: 38px; height: 38px; border: 1px solid rgba(255,255,255,.24); border-radius: 9999px; background: rgba(255,255,255,.14); color: #FFFFFF; font-size: 17px; cursor: pointer; font-family: inherit;">≡</button>
+    </div>
+    <sc-if value="{{ navOpen }}" hint-placeholder-val="{{ false }}">
+      <div style="position: fixed; inset: 0; top: 66px; background: #071A33; z-index: 89; display: flex; flex-direction: column;">
+        <a href="index-mobile.html" onClick="{{ closeNav }}" style="font-size: 17px; font-weight: 600; color: #FFFFFF; padding: 18px 24px; border-bottom: 1px solid rgba(255,255,255,.1);">Início</a>
+        <a href="index-mobile.html#procedimentos" onClick="{{ closeNav }}" style="font-size: 17px; font-weight: 600; color: #FFFFFF; padding: 18px 24px; border-bottom: 1px solid rgba(255,255,255,.1);">Procedimentos</a>
+        <a href="index-mobile.html#resultados" onClick="{{ closeNav }}" style="font-size: 17px; font-weight: 600; color: #FFFFFF; padding: 18px 24px; border-bottom: 1px solid rgba(255,255,255,.1);">Resultados</a>
+        <a href="#apoiar" onClick="{{ closeNav }}" style="font-size: 17px; font-weight: 600; color: #7FB2F0; padding: 18px 24px; border-bottom: 1px solid rgba(255,255,255,.1);">Apoiar o Projeto</a>
+        <a href="index-mobile.html#academy" onClick="{{ closeNav }}" style="font-size: 17px; font-weight: 600; color: #FFFFFF; padding: 18px 24px; border-bottom: 1px solid rgba(255,255,255,.1);">Academy</a>
+      </div>
+    </sc-if>
+  </header>
+
+  <section style="position: relative;">
+    <div style="position: relative; width: 100%; aspect-ratio: 4 / 5; overflow: hidden; background: #071A33;">
+      <img src="assets/hospital-leozinho-hero.png" alt="Projeto conceitual do Hospital Projeto Leozinho" style="width: 100%; height: 100%; object-fit: cover; object-position: center 30%;">
+      <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,26,51,.1) 40%, rgba(7,26,51,.92) 100%);"></div>
+      <p aria-hidden="true" style="position: absolute; bottom: 8px; right: 14px; font-size: 10.5px; color: rgba(255,255,255,.55); margin: 0;">Representação visual, projeto conceitual</p>
+    </div>
+    <div style="background: #071A33; padding: 32px 20px 40px;">
+      <p style="font-size: 12.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #7FB2F0; margin: 0 0 14px;">Projeto Leozinho · Reconstruindo faces</p>
+      <h1 style="font-size: 26px; font-weight: 700; line-height: 1.2; letter-spacing: -.02em; color: #FFFFFF; margin: 0 0 16px;">Mais de 550 cirurgias de reconstrução facial.</h1>
+      <p style="font-size: 14.5px; line-height: 1.6; color: rgba(255,255,255,.88); margin: 0 0 24px;">Cirurgia, cuidado e acesso para pessoas que enfrentam condições faciais complexas.</p>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <a data-tap="true" href="#apoiar" style="display: flex; align-items: center; justify-content: center; min-height: 54px; font-size: 14.5px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: #FFFFFF; background: #0B63CE; border-radius: 9999px;">Apoie o projeto</a>
+        <a data-tap="true" href="#comecou" style="display: flex; align-items: center; justify-content: center; min-height: 54px; font-size: 14.5px; font-weight: 600; color: #FFFFFF; border: 1px solid rgba(255,255,255,.4); border-radius: 9999px;">Conheça nossa história</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="comecou" style="padding: 44px 20px;">
+    <p style="font-size: 12.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #0B63CE; margin: 0 0 16px;">A origem</p>
+    <h2 style="font-size: 22px; font-weight: 700; line-height: 1.22; letter-spacing: -.02em; color: #16202B; margin: 0 0 18px;">Uma promessa que se transformou em missão.</h2>
+    <p style="font-size: 15px; line-height: 1.7; color: #4C5A67; margin: 0 0 14px;">O Projeto Leozinho nasceu de um dos momentos mais delicados da vida do Dr. Raulino Brasil. Durante a internação de seus filhos gêmeos, que nasceram prematuros e precisaram permanecer em uma UTI neonatal, ele fez uma promessa: se eles superassem aquela fase, dedicaria parte de sua profissão a ajudar pessoas que não tivessem condições de acessar determinados tratamentos.</p>
+    <p style="font-size: 15px; line-height: 1.7; color: #4C5A67; margin: 0;">Em 2021, essa promessa ganhou forma através do Projeto Leozinho, oferecendo reconstrução facial gratuita a pacientes com casos complexos. Mais do que uma iniciativa social, o projeto representa uma forma de transformar gratidão em cuidado e usar a profissão para devolver esperança, dignidade e novas possibilidades a quem mais precisa.</p>
+  </section>
+
+  <section style="background: #F5F9FE; padding: 44px 20px;">
+    <h3 style="font-size: 20px; font-weight: 700; line-height: 1.25; letter-spacing: -.02em; color: #16202B; margin: 0 0 22px;">Como o projeto funciona</h3>
+    <div style="display: flex; flex-direction: column; gap: 18px; margin-bottom: 26px;">
+      <div>
+        <p style="font-size: 14.5px; font-weight: 600; color: #0B63CE; margin: 0 0 6px;">Objetivo</p>
+        <p style="font-size: 15px; line-height: 1.65; color: #4C5A67; margin: 0;">Procedimentos de reconstrução facial em pacientes com tumores, deformidades, síndromes e sequelas de acidentes.</p>
+      </div>
+      <p style="font-size: 15px; line-height: 1.65; color: #4C5A67; margin: 0;">A iniciativa realiza cerca de um a dois procedimentos por dia.</p>
+      <div>
+        <p style="font-size: 14.5px; font-weight: 600; color: #0B63CE; margin: 0 0 6px;">Custo simbólico</p>
+        <p style="font-size: 15px; line-height: 1.65; color: #4C5A67; margin: 0;">Devido a normas éticas que não permitem atendimentos totalmente gratuitos, o projeto cobra o valor simbólico de R$ 1 por cirurgia.</p>
+      </div>
+    </div>
+    <div style="background: #0B63CE; border-radius: 18px; padding: 24px; box-shadow: 0 16px 32px rgba(11,99,206,.24);">
+      <p style="font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.75); margin: 0 0 10px;">Por que "Leozinho"?</p>
+      <p style="font-size: 14.5px; line-height: 1.65; color: #FFFFFF; margin: 0;">Léo foi o primeiro paciente operado pela iniciativa. Aos 17 anos, enfrentava a neurofibromatose e já havia passado por sete cirurgias. Após ser operado pelo Dr. Raulino Brasil, viveu uma importante transformação em sua rotina. Sua história marcou profundamente o projeto e, como forma de homenagem, a iniciativa passou a levar o nome Projeto Leozinho.</p>
+    </div>
+  </section>
+
+  <section style="padding: 44px 0;">
+    <div style="padding: 0 20px;">
+      <p style="font-size: 12.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #0B63CE; margin: 0 0 16px;">Histórias em movimento</p>
+      <h2 style="font-size: 20px; font-weight: 700; letter-spacing: -.01em; color: #16202B; margin: 0 0 20px;">Vídeos do Projeto Leozinho</h2>
+    </div>
+    <div data-slider="true" style="display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 20px;">
+      <video src="uploads/b8d939fe-9de9-4e54-9424-f776fdbdc4db.mp4" controls="controls" muted="muted" loop="loop" playsinline="playsinline" preload="metadata" style="flex: 0 0 62%; scroll-snap-align: start; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 16px; background: #071A33;"></video>
+      <video src="uploads/c58134ec-6f63-4b8a-8597-7fd1c68f46a9-69631f96.mp4" controls="controls" muted="muted" loop="loop" playsinline="playsinline" preload="metadata" style="flex: 0 0 62%; scroll-snap-align: start; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 16px; background: #071A33;"></video>
+      <video src="uploads/5f3229f4-df7a-4079-90d5-9a92db21acba.mp4" controls="controls" muted="muted" loop="loop" playsinline="playsinline" preload="metadata" style="flex: 0 0 62%; scroll-snap-align: start; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 16px; background: #071A33;"></video>
+    </div>
+  </section>
+
+  <section style="background: #071A33; padding: 48px 20px;">
+    <p style="font-size: 12.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #7FB2F0; margin: 0 0 16px;">O próximo capítulo</p>
+    <h2 style="font-size: 21px; font-weight: 700; line-height: 1.25; letter-spacing: -.01em; color: #FFFFFF; margin: 0 0 16px;">Um hospital construído para ampliar o acesso.</h2>
+    <p style="font-size: 15px; line-height: 1.7; color: rgba(255,255,255,.9); margin: 0 0 22px;">Está em desenvolvimento, em Araranguá (SC), um hospital próprio dedicado ao Projeto Leozinho, para ampliar a capacidade de atendimento, aumentar o número de cirurgias e receber pacientes de diferentes regiões do país com mais segurança e organização.</p>
+    <figure style="margin: 0 0 12px; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,.08);">
+      <img src="uploads/d0a28ec4-0538-4cff-8cd0-800af8767a22.jpg" alt="Projeto conceitual do Hospital Projeto Leozinho" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover;">
+      <figcaption style="font-size: 12.5px; color: rgba(255,255,255,.78); padding: 12px 16px;">Projeto conceitual da futura estrutura</figcaption>
+    </figure>
+    <figure style="margin: 0; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,.08);">
+      <img src="assets/hospital-inicio-obras.jpg" alt="Início das obras para construção do Hospital Projeto Leozinho" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: center 92%;">
+      <figcaption style="font-size: 12.5px; color: rgba(255,255,255,.78); padding: 12px 16px;">Início das Obras para Construção do Hospital</figcaption>
+    </figure>
+  </section>
+
+  <section id="apoiar" style="padding: 48px 20px; text-align: center;">
+    <h2 style="font-size: 21px; font-weight: 700; line-height: 1.3; letter-spacing: -.01em; color: #16202B; margin: 0 0 16px;">Você também pode fazer parte dessa construção.</h2>
+    <p style="font-size: 14.5px; line-height: 1.65; color: #4C5A67; margin: 0 0 24px;">Campanha oficial para a construção do Hospital Projeto Leozinho, com meta de <strong>R$ 1.200.000</strong>, destinada à estrutura física, materiais, equipamentos e itens necessários para colocar a unidade em funcionamento.</p>
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <a data-tap="true" href="https://vaquinhadorazoes.com/vaquinha/2107266820" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; min-height: 54px; font-size: 14px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: #FFFFFF; background: #0B63CE; border-radius: 9999px;">Apoiar o projeto</a>
+      <a data-tap="true" href="https://www.instagram.com/reel/Dcgq4ZGxKIU/?hl=es" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; min-height: 54px; font-size: 14.5px; font-weight: 600; color: #0B63CE; background: #FFFFFF; border: 1px solid #CBD9EA; border-radius: 9999px;">Ver projeto nas redes sociais</a>
+    </div>
+  </section>
+
+  <section style="background: #071A33; padding: 48px 20px;">
+    <p style="font-size: 12.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #7FB2F0; margin: 0 0 16px;">Reconhecimento</p>
+    <h2 style="font-size: 21px; font-weight: 700; line-height: 1.3; letter-spacing: -.01em; color: #FFFFFF; margin: 0 0 16px;">Uma iniciativa que ganhou o Brasil.</h2>
+    <p style="font-size: 14.5px; line-height: 1.65; color: rgba(255,255,255,.85); margin: 0 0 24px;">A Assembleia Legislativa de Santa Catarina já registrou congratulações formais ao Dr. Raulino Brasil pelo Projeto Leozinho e seu impacto social.</p>
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <div style="border: 1px solid rgba(255,255,255,.18); border-radius: 14px; padding: 18px;">
+        <p style="font-size: 12.5px; font-weight: 600; color: #7FB2F0; margin: 0 0 6px;">G1 Santa Catarina</p>
+        <p style="font-size: 14px; color: #FFFFFF; margin: 0 0 8px;">Projeto Leozinho realiza cirurgia de reconstrução em mulher que teve o lábio arrancado por cachorro</p>
+        <a href="https://g1.globo.com/sc/santa-catarina/noticia/2025/06/02/projeto-operacao-mulher-labio-arrancado-cao-conheca.ghtml" target="_blank" rel="noopener" style="font-size: 13px; font-weight: 600; color: #7FB2F0;">Ver matéria ›</a>
+      </div>
+      <div style="border: 1px solid rgba(255,255,255,.18); border-radius: 14px; padding: 18px;">
+        <p style="font-size: 12.5px; font-weight: 600; color: #7FB2F0; margin: 0 0 6px;">Terra</p>
+        <p style="font-size: 14px; color: #FFFFFF; margin: 0 0 8px;">Uma nova esperança: a vaquinha do Projeto Leozinho para construir hospital</p>
+        <a href="https://www.terra.com.br/noticias/uma-nova-esperanca-a-vaquinha-do-projeto-leozinho-para-construir-hospital,d72d08625f58ba3afa91c087fdaf4a50svqqwbq8.html" target="_blank" rel="noopener" style="font-size: 13px; font-weight: 600; color: #7FB2F0;">Ver matéria ›</a>
+      </div>
+      <div style="border: 1px solid rgba(255,255,255,.18); border-radius: 14px; padding: 18px;">
+        <p style="font-size: 12.5px; font-weight: 600; color: #7FB2F0; margin: 0 0 6px;">Assembleia Legislativa de SC (ALESC)</p>
+        <p style="font-size: 14px; color: #FFFFFF; margin: 0 0 8px;">Camilo Martins entrega moção de reconhecimento ao cirurgião Raulino Brasil</p>
+        <a href="https://www.alesc.sc.gov.br/fotos/album/mocaeo-de-aplauso-raulino-brasil-dep-camilo-martins/" target="_blank" rel="noopener" style="font-size: 13px; font-weight: 600; color: #7FB2F0;">Ver matéria ›</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #F5F9FE; padding: 44px 20px;">
+    <h2 style="font-size: 21px; font-weight: 700; letter-spacing: -.01em; color: #16202B; margin: 0 0 22px; text-align: center;">Perguntas frequentes</h2>
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+      <details data-faq="true" style="background: #FFFFFF; border-radius: 12px; padding: 16px 18px;">
+        <summary style="display: flex; justify-content: space-between; align-items: center; font-size: 15px; font-weight: 600; color: #16202B; cursor: pointer; list-style: none;">Quem pode participar?<span aria-hidden="true" style="color: #0B63CE; font-size: 18px;"></span></summary>
+        <p style="font-size: 14px; line-height: 1.6; color: #4C5A67; margin: 12px 0 0;">Pessoas com condições faciais complexas sem recursos para acessar tratamentos podem ser encaminhadas para avaliação e triagem.</p>
+      </details>
+      <details data-faq="true" style="background: #FFFFFF; border-radius: 12px; padding: 16px 18px;">
+        <summary style="display: flex; justify-content: space-between; align-items: center; font-size: 15px; font-weight: 600; color: #16202B; cursor: pointer; list-style: none;">Quais casos são atendidos?<span aria-hidden="true" style="color: #0B63CE; font-size: 18px;"></span></summary>
+        <p style="font-size: 14px; line-height: 1.6; color: #4C5A67; margin: 12px 0 0;">Deformidades faciais, sequelas de acidentes, tumores, paralisia facial, neurofibromatose, malformações, queimaduras, Síndrome de Parry-Romberg e outros casos avaliados individualmente.</p>
+      </details>
+      <details data-faq="true" style="background: #FFFFFF; border-radius: 12px; padding: 16px 18px;">
+        <summary style="display: flex; justify-content: space-between; align-items: center; font-size: 15px; font-weight: 600; color: #16202B; cursor: pointer; list-style: none;">Como indicar um paciente?<span aria-hidden="true" style="color: #0B63CE; font-size: 18px;"></span></summary>
+        <p style="font-size: 14px; line-height: 1.6; color: #4C5A67; margin: 12px 0 0;">Entre em contato com a equipe do Projeto Leozinho para verificar os critérios atuais e iniciar o processo.</p>
+      </details>
+      <details data-faq="true" style="background: #FFFFFF; border-radius: 12px; padding: 16px 18px;">
+        <summary style="display: flex; justify-content: space-between; align-items: center; font-size: 15px; font-weight: 600; color: #16202B; cursor: pointer; list-style: none;">Atende pessoas de outros estados?<span aria-hidden="true" style="color: #0B63CE; font-size: 18px;"></span></summary>
+        <p style="font-size: 14px; line-height: 1.6; color: #4C5A67; margin: 12px 0 0;">Sim, o projeto já atendeu pacientes de diferentes regiões do Brasil, mediante avaliação prévia.</p>
+      </details>
+      <details data-faq="true" style="background: #FFFFFF; border-radius: 12px; padding: 16px 18px;">
+        <summary style="display: flex; justify-content: space-between; align-items: center; font-size: 15px; font-weight: 600; color: #16202B; cursor: pointer; list-style: none;">Como ajudar o Projeto Leozinho?<span aria-hidden="true" style="color: #0B63CE; font-size: 18px;"></span></summary>
+        <p style="font-size: 14px; line-height: 1.6; color: #4C5A67; margin: 12px 0 0;">Apoiando a campanha oficial do Hospital Projeto Leozinho ou compartilhando o projeto.</p>
+      </details>
+      <details data-faq="true" style="background: #FFFFFF; border-radius: 12px; padding: 16px 18px;">
+        <summary style="display: flex; justify-content: space-between; align-items: center; font-size: 15px; font-weight: 600; color: #16202B; cursor: pointer; list-style: none;">Para onde vai o dinheiro da campanha?<span aria-hidden="true" style="color: #0B63CE; font-size: 18px;"></span></summary>
+        <p style="font-size: 14px; line-height: 1.6; color: #4C5A67; margin: 12px 0 0;">Para a construção do hospital: estrutura física, materiais, equipamentos e itens para colocar a unidade em funcionamento.</p>
+      </details>
+      <details data-faq="true" style="background: #FFFFFF; border-radius: 12px; padding: 16px 18px;">
+        <summary style="display: flex; justify-content: space-between; align-items: center; font-size: 15px; font-weight: 600; color: #16202B; cursor: pointer; list-style: none;">Como acompanhar a construção?<span aria-hidden="true" style="color: #0B63CE; font-size: 18px;"></span></summary>
+        <p style="font-size: 14px; line-height: 1.6; color: #4C5A67; margin: 12px 0 0;">As atualizações são divulgadas pelos canais oficiais do Projeto Leozinho.</p>
+      </details>
+    </div>
+  </section>
+
+  <section style="padding: 56px 20px; background: #071A33; text-align: center;">
+    <h2 style="font-size: 22px; font-weight: 700; line-height: 1.3; letter-spacing: -.01em; color: #FFFFFF; margin: 0 0 26px;">Uma cirurgia pode mudar uma etapa.<br>O cuidado pode mudar uma história.</h2>
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <a data-tap="true" href="https://wa.me/5548999918930" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; min-height: 54px; font-size: 14.5px; font-weight: 600; color: #0B63CE; background: #FFFFFF; border-radius: 9999px;">Indicar um paciente</a>
+      <a data-tap="true" href="#apoiar" style="display: flex; align-items: center; justify-content: center; min-height: 54px; font-size: 14.5px; font-weight: 600; color: #FFFFFF; background: #0B63CE; border-radius: 9999px;">Apoiar o Projeto</a>
+      <a data-tap="true" href="https://wa.me/5548999918930" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; min-height: 54px; font-size: 14.5px; font-weight: 600; color: #FFFFFF; border: 1px solid rgba(255,255,255,.5); border-radius: 9999px;">Falar com a equipe</a>
+    </div>
+  </section>
+
+  <footer style="background: #16202B; padding: 40px 20px 28px;">
+    <a href="index-mobile.html" style="font-size: 14px; font-weight: 600; color: #7FB2F0;">← Voltar ao site principal</a>
+    <br>
+    <a href="projeto-leozinho.html?view=desktop" style="font-size: 12.5px; color: rgba(255,255,255,.55); display: inline-block; margin-top: 10px;">Ver versão desktop</a>
+    <p style="font-size: 12px; line-height: 1.6; color: rgba(255,255,255,.6); margin: 20px 0 16px;">Informações sobre números, histórias e datas estão sujeitas a confirmação com a equipe do Projeto Leozinho antes da publicação final.</p>
+    <a href="https://linkefydigital.com.br/" target="_blank" rel="noopener" style="font-size: 13px; color: rgba(255,255,255,.7); display: block; margin-bottom: 10px;">Desenvolvido por Linkefy</a>
+    <p style="font-size: 12.5px; color: rgba(255,255,255,.7); margin: 0;">© Todos os direitos reservados 2026.</p>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { navOpen: false };
+  toggleNav = () => this.setState((s) => ({ navOpen: !s.navOpen }));
+  closeNav = () => this.setState({ navOpen: false });
+  renderVals() {
+    return { navOpen: this.state.navOpen, toggleNav: this.toggleNav, closeNav: this.closeNav };
+  }
+}
+</script>
+</body>
+</html>
