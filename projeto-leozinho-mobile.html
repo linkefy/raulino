@@ -41,7 +41,7 @@
   <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="120" rx="18" fill="#071A33"></rect><text x="60" y="74" text-anchor="middle" font-family="Poppins, sans-serif" font-size="34" font-weight="700" fill="#7FB2F0">PL</text></svg>
 </template>
 
-<div style="background: #FFFFFF; overflow-x: hidden; max-width: 100vw;">
+<div ref="{{ rootRef }}" style="background: #FFFFFF; overflow-x: hidden; max-width: 100vw;">
 
   <header style="position: fixed; top: 0; left: 0; right: 0; z-index: 90; padding: 16px 18px; background: linear-gradient(180deg, rgba(7,26,51,.55) 0%, rgba(7,26,51,0) 100%); display: flex; align-items: center; justify-content: space-between; gap: 10px;">
     <a href="index-mobile.html" style="display: flex; align-items: center;">
@@ -55,161 +55,165 @@
     </div>
     <sc-if value="{{ navOpen }}" hint-placeholder-val="{{ false }}">
       <div style="position: fixed; inset: 0; top: 66px; background: #071A33; z-index: 89; display: flex; flex-direction: column;">
-        <a href="index-mobile.html" onClick="{{ closeNav }}" style="font-size: 17px; font-weight: 600; color: #FFFFFF; padding: 18px 24px; border-bottom: 1px solid rgba(255,255,255,.1);">Início</a>
-        <a href="index-mobile.html#procedimentos" onClick="{{ closeNav }}" style="font-size: 17px; font-weight: 600; color: #FFFFFF; padding: 18px 24px; border-bottom: 1px solid rgba(255,255,255,.1);">Procedimentos</a>
-        <a href="index-mobile.html#resultados" onClick="{{ closeNav }}" style="font-size: 17px; font-weight: 600; color: #FFFFFF; padding: 18px 24px; border-bottom: 1px solid rgba(255,255,255,.1);">Resultados</a>
-        <a href="#apoiar" onClick="{{ closeNav }}" style="font-size: 17px; font-weight: 600; color: #7FB2F0; padding: 18px 24px; border-bottom: 1px solid rgba(255,255,255,.1);">Apoiar o Projeto</a>
-        <a href="index-mobile.html#academy" onClick="{{ closeNav }}" style="font-size: 17px; font-weight: 600; color: #FFFFFF; padding: 18px 24px; border-bottom: 1px solid rgba(255,255,255,.1);">Academy</a>
+        <a href="index-mobile.html" onClick="{{ closeNav }}" data-en="Home" data-es="Inicio" style="font-size: 17px; font-weight: 600; color: #FFFFFF; padding: 18px 24px; border-bottom: 1px solid rgba(255,255,255,.1);">Início</a>
+        <a href="index-mobile.html#procedimentos" onClick="{{ closeNav }}" data-en="Procedures" data-es="Procedimientos" style="font-size: 17px; font-weight: 600; color: #FFFFFF; padding: 18px 24px; border-bottom: 1px solid rgba(255,255,255,.1);">Procedimentos</a>
+        <a href="index-mobile.html#resultados" onClick="{{ closeNav }}" data-en="Results" data-es="Resultados" style="font-size: 17px; font-weight: 600; color: #FFFFFF; padding: 18px 24px; border-bottom: 1px solid rgba(255,255,255,.1);">Resultados</a>
+        <a href="#apoiar" onClick="{{ closeNav }}" data-en="Support the Project" data-es="Apoyar el Proyecto" style="font-size: 17px; font-weight: 600; color: #7FB2F0; padding: 18px 24px; border-bottom: 1px solid rgba(255,255,255,.1);">Apoiar o Projeto</a>
+        <a href="index-mobile.html#academy" onClick="{{ closeNav }}" data-en="Academy" data-es="Academy" style="font-size: 17px; font-weight: 600; color: #FFFFFF; padding: 18px 24px; border-bottom: 1px solid rgba(255,255,255,.1);">Academy</a>
+        <div style="display: flex; gap: 10px; padding: 18px 24px;">
+          <button type="button" onClick="{{ setPt }}" style="flex: 1; font-family: inherit; font-size: 13px; font-weight: 600; color: #FFFFFF; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); border-radius: 9999px; padding: 10px; cursor: pointer;">PT</button>
+          <button type="button" onClick="{{ setEn }}" style="flex: 1; font-family: inherit; font-size: 13px; font-weight: 600; color: #FFFFFF; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); border-radius: 9999px; padding: 10px; cursor: pointer;">EN</button>
+          <button type="button" onClick="{{ setEs }}" style="flex: 1; font-family: inherit; font-size: 13px; font-weight: 600; color: #FFFFFF; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); border-radius: 9999px; padding: 10px; cursor: pointer;">ES</button>
+        </div>
       </div>
     </sc-if>
   </header>
 
   <section style="position: relative;">
     <div style="position: relative; width: 100%; aspect-ratio: 4 / 5; overflow: hidden; background: #071A33;">
-      <img src="assets/hospital-leozinho-hero.png" alt="Projeto conceitual do Hospital Projeto Leozinho" style="width: 100%; height: 100%; object-fit: cover; object-position: center 30%;">
+      <img src="assets/hospital-leozinho-hero.png" alt="Projeto conceitual do Hospital Projeto Leozinho" fetchpriority="high" style="width: 100%; height: 100%; object-fit: cover; object-position: center 30%;">
       <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,26,51,.1) 40%, rgba(7,26,51,.92) 100%);"></div>
       <p aria-hidden="true" style="position: absolute; bottom: 8px; right: 14px; font-size: 10.5px; color: rgba(255,255,255,.55); margin: 0;">Representação visual, projeto conceitual</p>
     </div>
     <div style="background: #071A33; padding: 32px 20px 40px;">
-      <p style="font-size: 12.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #7FB2F0; margin: 0 0 14px;">Projeto Leozinho · Reconstruindo faces</p>
-      <h1 style="font-size: 26px; font-weight: 700; line-height: 1.2; letter-spacing: -.02em; color: #FFFFFF; margin: 0 0 16px;">Mais de 550 cirurgias de reconstrução facial.</h1>
-      <p style="font-size: 14.5px; line-height: 1.6; color: rgba(255,255,255,.88); margin: 0 0 24px;">Cirurgia, cuidado e acesso para pessoas que enfrentam condições faciais complexas.</p>
+      <p data-en="Leozinho Project · Rebuilding faces" data-es="Proyecto Leozinho · Reconstruyendo rostros" style="font-size: 12.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #7FB2F0; margin: 0 0 14px;">Projeto Leozinho · Reconstruindo faces</p>
+      <h1 data-en="Over 550 facial reconstruction surgeries." data-es="Más de 550 cirugías de reconstrucción facial." style="font-size: 26px; font-weight: 700; line-height: 1.2; letter-spacing: -.02em; color: #FFFFFF; margin: 0 0 16px;">Mais de 550 cirurgias de reconstrução facial.</h1>
+      <p data-en="Surgery, care and access for people facing complex facial conditions." data-es="Cirugía, cuidado y acceso para personas que enfrentan condiciones faciales complejas." style="font-size: 14.5px; line-height: 1.6; color: rgba(255,255,255,.88); margin: 0 0 24px;">Cirurgia, cuidado e acesso para pessoas que enfrentam condições faciais complexas.</p>
       <div style="display: flex; flex-direction: column; gap: 12px;">
-        <a data-tap="true" href="#apoiar" style="display: flex; align-items: center; justify-content: center; min-height: 54px; font-size: 14.5px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: #FFFFFF; background: #0B63CE; border-radius: 9999px;">Apoie o projeto</a>
-        <a data-tap="true" href="#comecou" style="display: flex; align-items: center; justify-content: center; min-height: 54px; font-size: 14.5px; font-weight: 600; color: #FFFFFF; border: 1px solid rgba(255,255,255,.4); border-radius: 9999px;">Conheça nossa história</a>
+        <a data-tap="true" href="#apoiar" data-en="Support the project" data-es="Apoya el proyecto" style="display: flex; align-items: center; justify-content: center; min-height: 54px; font-size: 14.5px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: #FFFFFF; background: #0B63CE; border-radius: 9999px;">Apoie o projeto</a>
+        <a data-tap="true" href="#comecou" data-en="Discover our story" data-es="Conoce nuestra historia" style="display: flex; align-items: center; justify-content: center; min-height: 54px; font-size: 14.5px; font-weight: 600; color: #FFFFFF; border: 1px solid rgba(255,255,255,.4); border-radius: 9999px;">Conheça nossa história</a>
       </div>
     </div>
   </section>
 
   <section id="comecou" style="padding: 44px 20px;">
-    <p style="font-size: 12.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #0B63CE; margin: 0 0 16px;">A origem</p>
-    <h2 style="font-size: 22px; font-weight: 700; line-height: 1.22; letter-spacing: -.02em; color: #16202B; margin: 0 0 18px;">Uma promessa que se transformou em missão.</h2>
-    <p style="font-size: 15px; line-height: 1.7; color: #4C5A67; margin: 0 0 14px;">O Projeto Leozinho nasceu de um dos momentos mais delicados da vida do Dr. Raulino Brasil. Durante a internação de seus filhos gêmeos, que nasceram prematuros e precisaram permanecer em uma UTI neonatal, ele fez uma promessa: se eles superassem aquela fase, dedicaria parte de sua profissão a ajudar pessoas que não tivessem condições de acessar determinados tratamentos.</p>
-    <p style="font-size: 15px; line-height: 1.7; color: #4C5A67; margin: 0;">Em 2021, essa promessa ganhou forma através do Projeto Leozinho, oferecendo reconstrução facial gratuita a pacientes com casos complexos. Mais do que uma iniciativa social, o projeto representa uma forma de transformar gratidão em cuidado e usar a profissão para devolver esperança, dignidade e novas possibilidades a quem mais precisa.</p>
+    <p data-en="The origin" data-es="El origen" style="font-size: 12.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #0B63CE; margin: 0 0 16px;">A origem</p>
+    <h2 data-en="A promise that became a mission." data-es="Una promesa que se convirtió en misión." style="font-size: 22px; font-weight: 700; line-height: 1.22; letter-spacing: -.02em; color: #16202B; margin: 0 0 18px;">Uma promessa que se transformou em missão.</h2>
+    <p data-en="The Leozinho Project was born from one of the most delicate moments in Dr. Raulino Brasil's life. While his twins, born premature, were in the neonatal ICU, he made a promise: if they made it through, he would dedicate part of his profession to helping people without the means to access certain treatments." style="font-size: 15px; line-height: 1.7; color: #4C5A67; margin: 0 0 14px;">O Projeto Leozinho nasceu de um dos momentos mais delicados da vida do Dr. Raulino Brasil. Durante a internação de seus filhos gêmeos, que nasceram prematuros e precisaram permanecer em uma UTI neonatal, ele fez uma promessa: se eles superassem aquela fase, dedicaria parte de sua profissão a ajudar pessoas que não tivessem condições de acessar determinados tratamentos.</p>
+    <p data-en="In 2021, that promise took shape through the Leozinho Project, offering free facial reconstruction to patients with complex cases. More than a social initiative, the project is a way to turn gratitude into care, using the profession to give back hope, dignity and new possibilities to those who need it most." style="font-size: 15px; line-height: 1.7; color: #4C5A67; margin: 0;">Em 2021, essa promessa ganhou forma através do Projeto Leozinho, oferecendo reconstrução facial gratuita a pacientes com casos complexos. Mais do que uma iniciativa social, o projeto representa uma forma de transformar gratidão em cuidado e usar a profissão para devolver esperança, dignidade e novas possibilidades a quem mais precisa.</p>
   </section>
 
   <section style="background: #F5F9FE; padding: 44px 20px;">
-    <h3 style="font-size: 20px; font-weight: 700; line-height: 1.25; letter-spacing: -.02em; color: #16202B; margin: 0 0 22px;">Como o projeto funciona</h3>
+    <h3 data-en="How the project works" data-es="Cómo funciona el proyecto" style="font-size: 20px; font-weight: 700; line-height: 1.25; letter-spacing: -.02em; color: #16202B; margin: 0 0 22px;">Como o projeto funciona</h3>
     <div style="display: flex; flex-direction: column; gap: 18px; margin-bottom: 26px;">
       <div>
-        <p style="font-size: 14.5px; font-weight: 600; color: #0B63CE; margin: 0 0 6px;">Objetivo</p>
-        <p style="font-size: 15px; line-height: 1.65; color: #4C5A67; margin: 0;">Procedimentos de reconstrução facial em pacientes com tumores, deformidades, síndromes e sequelas de acidentes.</p>
+        <p data-en="Goal" data-es="Objetivo" style="font-size: 14.5px; font-weight: 600; color: #0B63CE; margin: 0 0 6px;">Objetivo</p>
+        <p data-en="Facial reconstruction procedures for patients with tumours, deformities, syndromes and accident sequelae." style="font-size: 15px; line-height: 1.65; color: #4C5A67; margin: 0;">Procedimentos de reconstrução facial em pacientes com tumores, deformidades, síndromes e sequelas de acidentes.</p>
       </div>
-      <p style="font-size: 15px; line-height: 1.65; color: #4C5A67; margin: 0;">A iniciativa realiza cerca de um a dois procedimentos por dia.</p>
+      <p data-en="The initiative performs about one to two procedures per day." style="font-size: 15px; line-height: 1.65; color: #4C5A67; margin: 0;">A iniciativa realiza cerca de um a dois procedimentos por dia.</p>
       <div>
-        <p style="font-size: 14.5px; font-weight: 600; color: #0B63CE; margin: 0 0 6px;">Custo simbólico</p>
-        <p style="font-size: 15px; line-height: 1.65; color: #4C5A67; margin: 0;">Devido a normas éticas que não permitem atendimentos totalmente gratuitos, o projeto cobra o valor simbólico de R$ 1 por cirurgia.</p>
+        <p data-en="Symbolic cost" data-es="Costo simbólico" style="font-size: 14.5px; font-weight: 600; color: #0B63CE; margin: 0 0 6px;">Custo simbólico</p>
+        <p data-en="Due to ethical rules that don't allow fully free care, the project charges a symbolic R$ 1 per surgery." style="font-size: 15px; line-height: 1.65; color: #4C5A67; margin: 0;">Devido a normas éticas que não permitem atendimentos totalmente gratuitos, o projeto cobra o valor simbólico de R$ 1 por cirurgia.</p>
       </div>
     </div>
     <div style="background: #0B63CE; border-radius: 18px; padding: 24px; box-shadow: 0 16px 32px rgba(11,99,206,.24);">
-      <p style="font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.75); margin: 0 0 10px;">Por que "Leozinho"?</p>
-      <p style="font-size: 14.5px; line-height: 1.65; color: #FFFFFF; margin: 0;">Léo foi o primeiro paciente operado pela iniciativa. Aos 17 anos, enfrentava a neurofibromatose e já havia passado por sete cirurgias. Após ser operado pelo Dr. Raulino Brasil, viveu uma importante transformação em sua rotina. Sua história marcou profundamente o projeto e, como forma de homenagem, a iniciativa passou a levar o nome Projeto Leozinho.</p>
+      <p data-en="Why \"Leozinho\"?" style="font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.75); margin: 0 0 10px;">Por que "Leozinho"?</p>
+      <p data-en="Léo was the first patient operated on by the initiative. At 17, he faced neurofibromatosis and had already gone through seven surgeries. After being operated on by Dr. Raulino Brasil, he experienced a major transformation in his daily life. His story deeply marked the project, and as a tribute, the initiative took on the name Leozinho Project." style="font-size: 14.5px; line-height: 1.65; color: #FFFFFF; margin: 0;">Léo foi o primeiro paciente operado pela iniciativa. Aos 17 anos, enfrentava a neurofibromatose e já havia passado por sete cirurgias. Após ser operado pelo Dr. Raulino Brasil, viveu uma importante transformação em sua rotina. Sua história marcou profundamente o projeto e, como forma de homenagem, a iniciativa passou a levar o nome Projeto Leozinho.</p>
     </div>
   </section>
 
   <section style="padding: 44px 0;">
     <div style="padding: 0 20px;">
-      <p style="font-size: 12.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #0B63CE; margin: 0 0 16px;">Histórias em movimento</p>
-      <h2 style="font-size: 20px; font-weight: 700; letter-spacing: -.01em; color: #16202B; margin: 0 0 20px;">Vídeos do Projeto Leozinho</h2>
+      <p data-en="Stories in motion" data-es="Historias en movimiento" style="font-size: 12.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #0B63CE; margin: 0 0 16px;">Histórias em movimento</p>
+      <h2 data-en="Leozinho Project videos" data-es="Vídeos del Proyecto Leozinho" style="font-size: 20px; font-weight: 700; letter-spacing: -.01em; color: #16202B; margin: 0 0 20px;">Vídeos do Projeto Leozinho</h2>
     </div>
     <div data-slider="true" style="display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 20px;">
-      <video src="uploads/b8d939fe-9de9-4e54-9424-f776fdbdc4db.mp4" controls="controls" muted="muted" loop="loop" playsinline="playsinline" preload="metadata" style="flex: 0 0 62%; scroll-snap-align: start; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 16px; background: #071A33;"></video>
       <video src="uploads/c58134ec-6f63-4b8a-8597-7fd1c68f46a9-69631f96.mp4" controls="controls" muted="muted" loop="loop" playsinline="playsinline" preload="metadata" style="flex: 0 0 62%; scroll-snap-align: start; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 16px; background: #071A33;"></video>
       <video src="uploads/5f3229f4-df7a-4079-90d5-9a92db21acba.mp4" controls="controls" muted="muted" loop="loop" playsinline="playsinline" preload="metadata" style="flex: 0 0 62%; scroll-snap-align: start; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 16px; background: #071A33;"></video>
     </div>
   </section>
 
   <section style="background: #071A33; padding: 48px 20px;">
-    <p style="font-size: 12.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #7FB2F0; margin: 0 0 16px;">O próximo capítulo</p>
-    <h2 style="font-size: 21px; font-weight: 700; line-height: 1.25; letter-spacing: -.01em; color: #FFFFFF; margin: 0 0 16px;">Um hospital construído para ampliar o acesso.</h2>
-    <p style="font-size: 15px; line-height: 1.7; color: rgba(255,255,255,.9); margin: 0 0 22px;">Está em desenvolvimento, em Araranguá (SC), um hospital próprio dedicado ao Projeto Leozinho, para ampliar a capacidade de atendimento, aumentar o número de cirurgias e receber pacientes de diferentes regiões do país com mais segurança e organização.</p>
+    <p data-en="The next chapter" data-es="El próximo capítulo" style="font-size: 12.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #7FB2F0; margin: 0 0 16px;">O próximo capítulo</p>
+    <h2 data-en="A hospital built to expand access." data-es="Un hospital construido para ampliar el acceso." style="font-size: 21px; font-weight: 700; line-height: 1.25; letter-spacing: -.01em; color: #FFFFFF; margin: 0 0 16px;">Um hospital construído para ampliar o acesso.</h2>
+    <p data-en="A dedicated hospital for the Leozinho Project is under development in Araranguá (SC), to expand care capacity, increase the number of surgeries and welcome patients from different regions of the country with more safety and organisation." style="font-size: 15px; line-height: 1.7; color: rgba(255,255,255,.9); margin: 0 0 22px;">Está em desenvolvimento, em Araranguá (SC), um hospital próprio dedicado ao Projeto Leozinho, para ampliar a capacidade de atendimento, aumentar o número de cirurgias e receber pacientes de diferentes regiões do país com mais segurança e organização.</p>
     <figure style="margin: 0 0 12px; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,.08);">
-      <img src="uploads/d0a28ec4-0538-4cff-8cd0-800af8767a22.jpg" alt="Projeto conceitual do Hospital Projeto Leozinho" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover;">
-      <figcaption style="font-size: 12.5px; color: rgba(255,255,255,.78); padding: 12px 16px;">Projeto conceitual da futura estrutura</figcaption>
+      <img src="uploads/d0a28ec4-0538-4cff-8cd0-800af8767a22.jpg" alt="Projeto conceitual do Hospital Projeto Leozinho" loading="lazy" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover;">
+      <figcaption data-en="Conceptual design of the future structure" style="font-size: 12.5px; color: rgba(255,255,255,.78); padding: 12px 16px;">Projeto conceitual da futura estrutura</figcaption>
     </figure>
     <figure style="margin: 0; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,.08);">
-      <img src="assets/hospital-inicio-obras.jpg" alt="Início das obras para construção do Hospital Projeto Leozinho" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: center 92%;">
-      <figcaption style="font-size: 12.5px; color: rgba(255,255,255,.78); padding: 12px 16px;">Início das Obras para Construção do Hospital</figcaption>
+      <img src="assets/hospital-inicio-obras.jpg" alt="Início das obras para construção do Hospital Projeto Leozinho" loading="lazy" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: center 92%;">
+      <figcaption data-en="Start of construction works for the Hospital" style="font-size: 12.5px; color: rgba(255,255,255,.78); padding: 12px 16px;">Início das Obras para Construção do Hospital</figcaption>
     </figure>
   </section>
 
   <section id="apoiar" style="padding: 48px 20px; text-align: center;">
-    <h2 style="font-size: 21px; font-weight: 700; line-height: 1.3; letter-spacing: -.01em; color: #16202B; margin: 0 0 16px;">Você também pode fazer parte dessa construção.</h2>
-    <p style="font-size: 14.5px; line-height: 1.65; color: #4C5A67; margin: 0 0 24px;">Campanha oficial para a construção do Hospital Projeto Leozinho, com meta de <strong>R$ 1.200.000</strong>, destinada à estrutura física, materiais, equipamentos e itens necessários para colocar a unidade em funcionamento.</p>
+    <h2 data-en="You can also be part of this construction." data-es="Tú también puedes ser parte de esta construcción." style="font-size: 21px; font-weight: 700; line-height: 1.3; letter-spacing: -.01em; color: #16202B; margin: 0 0 16px;">Você também pode fazer parte dessa construção.</h2>
+    <p data-en-html="Official campaign for the construction of the Leozinho Project Hospital, with a goal of &lt;strong&gt;R$ 1,200,000&lt;/strong&gt;, allocated to physical structure, materials, equipment and everything needed to bring the unit into operation." style="font-size: 14.5px; line-height: 1.65; color: #4C5A67; margin: 0 0 24px;">Campanha oficial para a construção do Hospital Projeto Leozinho, com meta de <strong>R$ 1.200.000</strong>, destinada à estrutura física, materiais, equipamentos e itens necessários para colocar a unidade em funcionamento.</p>
     <div style="display: flex; flex-direction: column; gap: 12px;">
-      <a data-tap="true" href="https://vaquinhadorazoes.com/vaquinha/2107266820" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; min-height: 54px; font-size: 14px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: #FFFFFF; background: #0B63CE; border-radius: 9999px;">Apoiar o projeto</a>
-      <a data-tap="true" href="https://www.instagram.com/reel/Dcgq4ZGxKIU/?hl=es" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; min-height: 54px; font-size: 14.5px; font-weight: 600; color: #0B63CE; background: #FFFFFF; border: 1px solid #CBD9EA; border-radius: 9999px;">Ver projeto nas redes sociais</a>
+      <a data-tap="true" href="https://vaquinhadorazoes.com/vaquinha/2107266820" target="_blank" rel="noopener" data-en="Support the project" data-es="Apoya el proyecto" style="display: flex; align-items: center; justify-content: center; min-height: 54px; font-size: 14px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: #FFFFFF; background: #0B63CE; border-radius: 9999px;">Apoiar o projeto</a>
+      <a data-tap="true" href="https://www.instagram.com/reel/Dcgq4ZGxKIU/?hl=es" target="_blank" rel="noopener" data-en="See the project on social media" data-es="Ver el proyecto en redes sociales" style="display: flex; align-items: center; justify-content: center; min-height: 54px; font-size: 14.5px; font-weight: 600; color: #0B63CE; background: #FFFFFF; border: 1px solid #CBD9EA; border-radius: 9999px;">Ver projeto nas redes sociais</a>
     </div>
   </section>
 
   <section style="background: #071A33; padding: 48px 20px;">
-    <p style="font-size: 12.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #7FB2F0; margin: 0 0 16px;">Reconhecimento</p>
-    <h2 style="font-size: 21px; font-weight: 700; line-height: 1.3; letter-spacing: -.01em; color: #FFFFFF; margin: 0 0 16px;">Uma iniciativa que ganhou o Brasil.</h2>
-    <p style="font-size: 14.5px; line-height: 1.65; color: rgba(255,255,255,.85); margin: 0 0 24px;">A Assembleia Legislativa de Santa Catarina já registrou congratulações formais ao Dr. Raulino Brasil pelo Projeto Leozinho e seu impacto social.</p>
+    <p data-en="Recognition" data-es="Reconocimiento" style="font-size: 12.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #7FB2F0; margin: 0 0 16px;">Reconhecimento</p>
+    <h2 data-en="An initiative that won over Brazil." data-es="Una iniciativa que conquistó Brasil." style="font-size: 21px; font-weight: 700; line-height: 1.3; letter-spacing: -.01em; color: #FFFFFF; margin: 0 0 16px;">Uma iniciativa que ganhou o Brasil.</h2>
+    <p data-en="The Santa Catarina Legislative Assembly has already recorded formal congratulations to Dr. Raulino Brasil for the Leozinho Project and its social impact." style="font-size: 14.5px; line-height: 1.65; color: rgba(255,255,255,.85); margin: 0 0 24px;">A Assembleia Legislativa de Santa Catarina já registrou congratulações formais ao Dr. Raulino Brasil pelo Projeto Leozinho e seu impacto social.</p>
     <div style="display: flex; flex-direction: column; gap: 12px;">
       <div style="border: 1px solid rgba(255,255,255,.18); border-radius: 14px; padding: 18px;">
         <p style="font-size: 12.5px; font-weight: 600; color: #7FB2F0; margin: 0 0 6px;">G1 Santa Catarina</p>
-        <p style="font-size: 14px; color: #FFFFFF; margin: 0 0 8px;">Projeto Leozinho realiza cirurgia de reconstrução em mulher que teve o lábio arrancado por cachorro</p>
-        <a href="https://g1.globo.com/sc/santa-catarina/noticia/2025/06/02/projeto-operacao-mulher-labio-arrancado-cao-conheca.ghtml" target="_blank" rel="noopener" style="font-size: 13px; font-weight: 600; color: #7FB2F0;">Ver matéria ›</a>
+        <p data-en="Leozinho Project performs reconstruction surgery on woman whose lip was torn by a dog" style="font-size: 14px; color: #FFFFFF; margin: 0 0 8px;">Projeto Leozinho realiza cirurgia de reconstrução em mulher que teve o lábio arrancado por cachorro</p>
+        <a href="https://g1.globo.com/sc/santa-catarina/noticia/2025/06/02/projeto-operacao-mulher-labio-arrancado-cao-conheca.ghtml" target="_blank" rel="noopener" data-en="See article ›" style="font-size: 13px; font-weight: 600; color: #7FB2F0;">Ver matéria ›</a>
       </div>
       <div style="border: 1px solid rgba(255,255,255,.18); border-radius: 14px; padding: 18px;">
         <p style="font-size: 12.5px; font-weight: 600; color: #7FB2F0; margin: 0 0 6px;">Terra</p>
-        <p style="font-size: 14px; color: #FFFFFF; margin: 0 0 8px;">Uma nova esperança: a vaquinha do Projeto Leozinho para construir hospital</p>
-        <a href="https://www.terra.com.br/noticias/uma-nova-esperanca-a-vaquinha-do-projeto-leozinho-para-construir-hospital,d72d08625f58ba3afa91c087fdaf4a50svqqwbq8.html" target="_blank" rel="noopener" style="font-size: 13px; font-weight: 600; color: #7FB2F0;">Ver matéria ›</a>
+        <p data-en="A new hope: the Leozinho Project fundraiser to build a hospital" style="font-size: 14px; color: #FFFFFF; margin: 0 0 8px;">Uma nova esperança: a vaquinha do Projeto Leozinho para construir hospital</p>
+        <a href="https://www.terra.com.br/noticias/uma-nova-esperanca-a-vaquinha-do-projeto-leozinho-para-construir-hospital,d72d08625f58ba3afa91c087fdaf4a50svqqwbq8.html" target="_blank" rel="noopener" data-en="See article ›" style="font-size: 13px; font-weight: 600; color: #7FB2F0;">Ver matéria ›</a>
       </div>
       <div style="border: 1px solid rgba(255,255,255,.18); border-radius: 14px; padding: 18px;">
         <p style="font-size: 12.5px; font-weight: 600; color: #7FB2F0; margin: 0 0 6px;">Assembleia Legislativa de SC (ALESC)</p>
-        <p style="font-size: 14px; color: #FFFFFF; margin: 0 0 8px;">Camilo Martins entrega moção de reconhecimento ao cirurgião Raulino Brasil</p>
-        <a href="https://www.alesc.sc.gov.br/fotos/album/mocaeo-de-aplauso-raulino-brasil-dep-camilo-martins/" target="_blank" rel="noopener" style="font-size: 13px; font-weight: 600; color: #7FB2F0;">Ver matéria ›</a>
+        <p data-en="Camilo Martins presents recognition motion to surgeon Raulino Brasil" style="font-size: 14px; color: #FFFFFF; margin: 0 0 8px;">Camilo Martins entrega moção de reconhecimento ao cirurgião Raulino Brasil</p>
+        <a href="https://www.alesc.sc.gov.br/fotos/album/mocaeo-de-aplauso-raulino-brasil-dep-camilo-martins/" target="_blank" rel="noopener" data-en="See article ›" style="font-size: 13px; font-weight: 600; color: #7FB2F0;">Ver matéria ›</a>
       </div>
     </div>
   </section>
 
   <section style="background: #F5F9FE; padding: 44px 20px;">
-    <h2 style="font-size: 21px; font-weight: 700; letter-spacing: -.01em; color: #16202B; margin: 0 0 22px; text-align: center;">Perguntas frequentes</h2>
+    <h2 data-en="Frequently asked questions" data-es="Preguntas frecuentes" style="font-size: 21px; font-weight: 700; letter-spacing: -.01em; color: #16202B; margin: 0 0 22px; text-align: center;">Perguntas frequentes</h2>
     <div style="display: flex; flex-direction: column; gap: 10px;">
       <details data-faq="true" style="background: #FFFFFF; border-radius: 12px; padding: 16px 18px;">
-        <summary style="display: flex; justify-content: space-between; align-items: center; font-size: 15px; font-weight: 600; color: #16202B; cursor: pointer; list-style: none;">Quem pode participar?<span aria-hidden="true" style="color: #0B63CE; font-size: 18px;"></span></summary>
-        <p style="font-size: 14px; line-height: 1.6; color: #4C5A67; margin: 12px 0 0;">Pessoas com condições faciais complexas sem recursos para acessar tratamentos podem ser encaminhadas para avaliação e triagem.</p>
+        <summary data-en="Who can join?" style="display: flex; justify-content: space-between; align-items: center; font-size: 15px; font-weight: 600; color: #16202B; cursor: pointer; list-style: none;">Quem pode participar?<span aria-hidden="true" style="color: #0B63CE; font-size: 18px;"></span></summary>
+        <p data-en="People with complex facial conditions without the means to access treatment can be referred for assessment and screening." style="font-size: 14px; line-height: 1.6; color: #4C5A67; margin: 12px 0 0;">Pessoas com condições faciais complexas sem recursos para acessar tratamentos podem ser encaminhadas para avaliação e triagem.</p>
       </details>
       <details data-faq="true" style="background: #FFFFFF; border-radius: 12px; padding: 16px 18px;">
-        <summary style="display: flex; justify-content: space-between; align-items: center; font-size: 15px; font-weight: 600; color: #16202B; cursor: pointer; list-style: none;">Quais casos são atendidos?<span aria-hidden="true" style="color: #0B63CE; font-size: 18px;"></span></summary>
-        <p style="font-size: 14px; line-height: 1.6; color: #4C5A67; margin: 12px 0 0;">Deformidades faciais, sequelas de acidentes, tumores, paralisia facial, neurofibromatose, malformações, queimaduras, Síndrome de Parry-Romberg e outros casos avaliados individualmente.</p>
+        <summary data-en="Which cases are treated?" style="display: flex; justify-content: space-between; align-items: center; font-size: 15px; font-weight: 600; color: #16202B; cursor: pointer; list-style: none;">Quais casos são atendidos?<span aria-hidden="true" style="color: #0B63CE; font-size: 18px;"></span></summary>
+        <p data-en="Facial deformities, accident sequelae, tumours, facial paralysis, neurofibromatosis, malformations, burns, Parry-Romberg Syndrome and other cases assessed individually." style="font-size: 14px; line-height: 1.6; color: #4C5A67; margin: 12px 0 0;">Deformidades faciais, sequelas de acidentes, tumores, paralisia facial, neurofibromatose, malformações, queimaduras, Síndrome de Parry-Romberg e outros casos avaliados individualmente.</p>
       </details>
       <details data-faq="true" style="background: #FFFFFF; border-radius: 12px; padding: 16px 18px;">
-        <summary style="display: flex; justify-content: space-between; align-items: center; font-size: 15px; font-weight: 600; color: #16202B; cursor: pointer; list-style: none;">Como indicar um paciente?<span aria-hidden="true" style="color: #0B63CE; font-size: 18px;"></span></summary>
-        <p style="font-size: 14px; line-height: 1.6; color: #4C5A67; margin: 12px 0 0;">Entre em contato com a equipe do Projeto Leozinho para verificar os critérios atuais e iniciar o processo.</p>
+        <summary data-en="How do I refer a patient?" style="display: flex; justify-content: space-between; align-items: center; font-size: 15px; font-weight: 600; color: #16202B; cursor: pointer; list-style: none;">Como indicar um paciente?<span aria-hidden="true" style="color: #0B63CE; font-size: 18px;"></span></summary>
+        <p data-en="Contact the Leozinho Project team to check current criteria and start the process." style="font-size: 14px; line-height: 1.6; color: #4C5A67; margin: 12px 0 0;">Entre em contato com a equipe do Projeto Leozinho para verificar os critérios atuais e iniciar o processo.</p>
       </details>
       <details data-faq="true" style="background: #FFFFFF; border-radius: 12px; padding: 16px 18px;">
-        <summary style="display: flex; justify-content: space-between; align-items: center; font-size: 15px; font-weight: 600; color: #16202B; cursor: pointer; list-style: none;">Atende pessoas de outros estados?<span aria-hidden="true" style="color: #0B63CE; font-size: 18px;"></span></summary>
-        <p style="font-size: 14px; line-height: 1.6; color: #4C5A67; margin: 12px 0 0;">Sim, o projeto já atendeu pacientes de diferentes regiões do Brasil, mediante avaliação prévia.</p>
+        <summary data-en="Does it treat people from other states?" style="display: flex; justify-content: space-between; align-items: center; font-size: 15px; font-weight: 600; color: #16202B; cursor: pointer; list-style: none;">Atende pessoas de outros estados?<span aria-hidden="true" style="color: #0B63CE; font-size: 18px;"></span></summary>
+        <p data-en="Yes, the project has already treated patients from different regions of Brazil, subject to a prior assessment." style="font-size: 14px; line-height: 1.6; color: #4C5A67; margin: 12px 0 0;">Sim, o projeto já atendeu pacientes de diferentes regiões do Brasil, mediante avaliação prévia.</p>
       </details>
       <details data-faq="true" style="background: #FFFFFF; border-radius: 12px; padding: 16px 18px;">
-        <summary style="display: flex; justify-content: space-between; align-items: center; font-size: 15px; font-weight: 600; color: #16202B; cursor: pointer; list-style: none;">Como ajudar o Projeto Leozinho?<span aria-hidden="true" style="color: #0B63CE; font-size: 18px;"></span></summary>
-        <p style="font-size: 14px; line-height: 1.6; color: #4C5A67; margin: 12px 0 0;">Apoiando a campanha oficial do Hospital Projeto Leozinho ou compartilhando o projeto.</p>
+        <summary data-en="How can I help?" style="display: flex; justify-content: space-between; align-items: center; font-size: 15px; font-weight: 600; color: #16202B; cursor: pointer; list-style: none;">Como ajudar o Projeto Leozinho?<span aria-hidden="true" style="color: #0B63CE; font-size: 18px;"></span></summary>
+        <p data-en="By supporting the official Leozinho Project Hospital campaign or sharing the project." style="font-size: 14px; line-height: 1.6; color: #4C5A67; margin: 12px 0 0;">Apoiando a campanha oficial do Hospital Projeto Leozinho ou compartilhando o projeto.</p>
       </details>
       <details data-faq="true" style="background: #FFFFFF; border-radius: 12px; padding: 16px 18px;">
-        <summary style="display: flex; justify-content: space-between; align-items: center; font-size: 15px; font-weight: 600; color: #16202B; cursor: pointer; list-style: none;">Para onde vai o dinheiro da campanha?<span aria-hidden="true" style="color: #0B63CE; font-size: 18px;"></span></summary>
-        <p style="font-size: 14px; line-height: 1.6; color: #4C5A67; margin: 12px 0 0;">Para a construção do hospital: estrutura física, materiais, equipamentos e itens para colocar a unidade em funcionamento.</p>
+        <summary data-en="Where does the campaign money go?" style="display: flex; justify-content: space-between; align-items: center; font-size: 15px; font-weight: 600; color: #16202B; cursor: pointer; list-style: none;">Para onde vai o dinheiro da campanha?<span aria-hidden="true" style="color: #0B63CE; font-size: 18px;"></span></summary>
+        <p data-en="To building the hospital: physical structure, materials, equipment and everything needed to bring the unit into operation." style="font-size: 14px; line-height: 1.6; color: #4C5A67; margin: 12px 0 0;">Para a construção do hospital: estrutura física, materiais, equipamentos e itens para colocar a unidade em funcionamento.</p>
       </details>
       <details data-faq="true" style="background: #FFFFFF; border-radius: 12px; padding: 16px 18px;">
-        <summary style="display: flex; justify-content: space-between; align-items: center; font-size: 15px; font-weight: 600; color: #16202B; cursor: pointer; list-style: none;">Como acompanhar a construção?<span aria-hidden="true" style="color: #0B63CE; font-size: 18px;"></span></summary>
-        <p style="font-size: 14px; line-height: 1.6; color: #4C5A67; margin: 12px 0 0;">As atualizações são divulgadas pelos canais oficiais do Projeto Leozinho.</p>
+        <summary data-en="How can I follow the construction?" style="display: flex; justify-content: space-between; align-items: center; font-size: 15px; font-weight: 600; color: #16202B; cursor: pointer; list-style: none;">Como acompanhar a construção?<span aria-hidden="true" style="color: #0B63CE; font-size: 18px;"></span></summary>
+        <p data-en="Updates are shared through the Leozinho Project's official channels." style="font-size: 14px; line-height: 1.6; color: #4C5A67; margin: 12px 0 0;">As atualizações são divulgadas pelos canais oficiais do Projeto Leozinho.</p>
       </details>
     </div>
   </section>
 
   <section style="padding: 56px 20px; background: #071A33; text-align: center;">
-    <h2 style="font-size: 22px; font-weight: 700; line-height: 1.3; letter-spacing: -.01em; color: #FFFFFF; margin: 0 0 26px;">Uma cirurgia pode mudar uma etapa.<br>O cuidado pode mudar uma história.</h2>
+    <h2 data-en-html="A surgery can change a chapter.&lt;br&gt;Care can change a story." style="font-size: 22px; font-weight: 700; line-height: 1.3; letter-spacing: -.01em; color: #FFFFFF; margin: 0 0 26px;">Uma cirurgia pode mudar uma etapa.<br>O cuidado pode mudar uma história.</h2>
     <div style="display: flex; flex-direction: column; gap: 12px;">
-      <a data-tap="true" href="https://wa.me/5548999918930" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; min-height: 54px; font-size: 14.5px; font-weight: 600; color: #0B63CE; background: #FFFFFF; border-radius: 9999px;">Indicar um paciente</a>
-      <a data-tap="true" href="#apoiar" style="display: flex; align-items: center; justify-content: center; min-height: 54px; font-size: 14.5px; font-weight: 600; color: #FFFFFF; background: #0B63CE; border-radius: 9999px;">Apoiar o Projeto</a>
-      <a data-tap="true" href="https://wa.me/5548999918930" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; min-height: 54px; font-size: 14.5px; font-weight: 600; color: #FFFFFF; border: 1px solid rgba(255,255,255,.5); border-radius: 9999px;">Falar com a equipe</a>
+      <a data-tap="true" href="https://wa.me/5548999918930" target="_blank" rel="noopener" data-en="Refer a patient" data-es="Referir un paciente" style="display: flex; align-items: center; justify-content: center; min-height: 54px; font-size: 14.5px; font-weight: 600; color: #0B63CE; background: #FFFFFF; border-radius: 9999px;">Indicar um paciente</a>
+      <a data-tap="true" href="#apoiar" data-en="Support the Project" data-es="Apoyar el Proyecto" style="display: flex; align-items: center; justify-content: center; min-height: 54px; font-size: 14.5px; font-weight: 600; color: #FFFFFF; background: #0B63CE; border-radius: 9999px;">Apoiar o Projeto</a>
+      <a data-tap="true" href="https://wa.me/5548999918930" target="_blank" rel="noopener" data-en="Talk to the team" data-es="Hablar con el equipo" style="display: flex; align-items: center; justify-content: center; min-height: 54px; font-size: 14.5px; font-weight: 600; color: #FFFFFF; border: 1px solid rgba(255,255,255,.5); border-radius: 9999px;">Falar com a equipe</a>
     </div>
   </section>
 
   <footer style="background: #16202B; padding: 40px 20px 28px;">
-    <a href="index-mobile.html" style="font-size: 14px; font-weight: 600; color: #7FB2F0;">← Voltar ao site principal</a>
+    <a href="index-mobile.html" data-en="← Back to main site" data-es="← Volver al sitio principal" style="font-size: 14px; font-weight: 600; color: #7FB2F0;">← Voltar ao site principal</a>
     <br>
     <a href="projeto-leozinho.html?view=desktop" style="font-size: 12.5px; color: rgba(255,255,255,.55); display: inline-block; margin-top: 10px;">Ver versão desktop</a>
     <p style="font-size: 12px; line-height: 1.6; color: rgba(255,255,255,.6); margin: 20px 0 16px;">Informações sobre números, histórias e datas estão sujeitas a confirmação com a equipe do Projeto Leozinho antes da publicação final.</p>
@@ -221,11 +225,51 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { navOpen: false };
+  state = {
+    navOpen: false,
+    lang: (() => { try { return localStorage.getItem('rb-lang') || 'pt'; } catch (e) { return 'pt'; } })()
+  };
+  rootRef = React.createRef();
+  componentDidMount() { this.applyLang(); }
+  componentDidUpdate(_, prevState) { if (prevState.lang !== this.state.lang) this.applyLang(); }
+  applyLang() {
+    const root = this.rootRef.current;
+    const lang = this.state.lang;
+    if (root) {
+      Array.prototype.forEach.call(root.querySelectorAll('[data-en-html]'), (el) => {
+        if (el.dataset.ptHtml === undefined) el.dataset.ptHtml = el.innerHTML;
+        let next = el.dataset.ptHtml;
+        if (lang === 'en') next = el.dataset.enHtml;
+        else if (lang === 'es') next = el.dataset.esHtml || el.dataset.enHtml;
+        if (el.innerHTML !== next) el.innerHTML = next;
+      });
+      Array.prototype.forEach.call(root.querySelectorAll('[data-en]'), (el) => {
+        if (el.dataset.pt === undefined) el.dataset.pt = el.textContent;
+        let next = el.dataset.pt;
+        if (lang === 'en') next = el.dataset.en;
+        else if (lang === 'es') next = el.dataset.es || el.dataset.en;
+        if (el.textContent !== next) el.textContent = next;
+      });
+    }
+    document.documentElement.lang = lang === 'en' ? 'en' : (lang === 'es' ? 'es' : 'pt-BR');
+  }
   toggleNav = () => this.setState((s) => ({ navOpen: !s.navOpen }));
   closeNav = () => this.setState({ navOpen: false });
+  setLang = (lang) => {
+    try { localStorage.setItem('rb-lang', lang); } catch (e) {}
+    this.setState({ lang: lang, navOpen: false });
+  };
   renderVals() {
-    return { navOpen: this.state.navOpen, toggleNav: this.toggleNav, closeNav: this.closeNav };
+    return {
+      rootRef: this.rootRef,
+      navOpen: this.state.navOpen,
+      toggleNav: this.toggleNav,
+      closeNav: this.closeNav,
+      setPt: () => this.setLang('pt'),
+      setEn: () => this.setLang('en'),
+      setEs: () => this.setLang('es'),
+      langCode: this.state.lang === 'en' ? 'EN' : (this.state.lang === 'es' ? 'ES' : 'PT')
+    };
   }
 }
 </script>

@@ -98,9 +98,9 @@
 
 <div ref="{{ rootRef }}" style="background: #FFFFFF; overflow-x: hidden;">
 
-  <header data-site-header="true" style="position: fixed; top: 0; left: 0; right: 0; z-index: 90; padding: 8px 32px; background: {{ headerBg }}; backdrop-filter: {{ headerBlur }}; border-bottom: 1px solid {{ headerBorder }}; display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+  <header data-site-header="true" style="position: fixed; top: 0; left: 0; right: 0; z-index: 90; padding: 14px 32px; background: {{ headerBg }}; backdrop-filter: {{ headerBlur }}; border-bottom: 1px solid {{ headerBorder }}; display: flex; align-items: center; justify-content: space-between; gap: 16px;">
     <a href="#inicio" style="display: flex; align-items: center; flex: none;">
-      <img data-header-logo="true" src="assets/logo-novo.png" alt="Clínica Dr. Raulino Brasil" style="height: 160px; width: auto; object-fit: contain;">
+      <img data-header-logo="true" src="assets/logo-novo.png" alt="Clínica Dr. Raulino Brasil" style="height: 120px; width: auto; object-fit: contain;">
     </a>
     <nav data-desktop-nav="true" aria-label="Navegação principal" style="display: flex; align-items: center; gap: 18px;">
         <a data-nav-link="true" data-active="{{ active_inicio }}" href="#inicio" data-en="Home" data-es="Inicio" style="font-size: 13px; font-weight: 500; letter-spacing: .01em; color: rgba(255,255,255,.86); padding-bottom: 2px; transition: color 220ms ease-out;">Início</a>
@@ -149,13 +149,13 @@
     </sc-if>
   </header>
 
-  <section id="inicio" data-hero="true" style="position: relative; display: flex; align-items: center; min-height: 100svh; padding: 196px 32px 96px; background: #071A33; overflow: hidden;">
+  <section id="inicio" data-hero="true" style="position: relative; display: flex; align-items: center; min-height: 100svh; padding: 280px 32px 96px; background: #071A33; overflow: hidden;">
     <div data-top-sentinel="true" aria-hidden="true" style="position: absolute; top: 0; left: 0; width: 1px; height: 1px; pointer-events: none;"></div>
-    <img data-hero-img="true" src="assets/hero-raulino.png" alt="Dr. Raulino Brasil" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 72% 40%;">
+    <img data-hero-img="true" src="assets/hero-raulino.png" alt="Dr. Raulino Brasil" fetchpriority="high" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 65% 50%;">
     <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(97deg, rgba(7,26,51,.96) 0%, rgba(7,26,51,.9) 30%, rgba(7,26,51,.55) 54%, rgba(7,26,51,.12) 78%, rgba(7,26,51,0) 100%);"></div>
     <div data-hero-copy="true" style="position: relative; width: 100%; max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column;">
       <p style="font-size: 13px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #7FB2F0; margin: 0 0 26px; animation: rbFade 600ms ease-out both;">Dr. Raulino Brasil</p>
-      <h1 data-en="A specialist in complex facial surgery." style="font-size: clamp(38px, 4.6vw, 62px); font-weight: 700; line-height: 1.04; letter-spacing: -.03em; color: #FFFFFF; margin: 0 0 26px; max-width: 17ch; text-shadow: 0 2px 18px rgba(7,26,51,.35); animation: rbRise 760ms cubic-bezier(.16,1,.3,1) 60ms both;">Especialista em cirurgia facial de alta complexidade.</h1>
+      <h1 data-en="Global reference in Deep Plane surgeries" style="font-size: clamp(38px, 4.6vw, 62px); font-weight: 700; line-height: 1.04; letter-spacing: -.03em; color: #FFFFFF; margin: 0 0 26px; max-width: 17ch; text-shadow: 0 2px 18px rgba(7,26,51,.35); animation: rbRise 760ms cubic-bezier(.16,1,.3,1) 60ms both;">Referência mundial em cirurgias de Deep Plane</h1>
       <p data-en="Oral and maxillofacial surgery in our own facilities in Araranguá and Palhoça, Santa Catarina, with an individual assessment of every case." style="font-size: 17.5px; line-height: 1.6; color: rgba(255,255,255,.9); margin: 0 0 40px; max-width: 44ch; animation: rbRise 760ms cubic-bezier(.16,1,.3,1) 140ms both;">Clínica especializada em cirurgia e traumatologia bucomaxilofacial, com atuação em Araranguá e Palhoça, Santa Catarina, e avaliação individual de cada caso.</p>
       <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px; animation: rbRise 760ms cubic-bezier(.16,1,.3,1) 220ms both;">
         <a data-en="BOOK A CONSULTATION" href="https://wa.me/5548999439007" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; font-size: 13.5px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: #FFFFFF; background: #0B63CE; padding: 19px 34px; border-radius: 9999px; box-shadow: 0 12px 28px rgba(11,99,206,.32); transition: transform 150ms cubic-bezier(.16,1,.3,1), background 150ms ease-out;">Agendar consulta</a>
@@ -169,14 +169,14 @@
   </section>
 
   <section id="sobre" style="position: relative; padding: 120px 32px; background: #FFFFFF; overflow: hidden;">
-    <img src="assets/sobre-bg.jpg" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: left center;">
+    <img src="assets/sobre-bg.jpg" alt="" aria-hidden="true" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: left center;">
     <div style="position: relative; max-width: 1200px; margin: 0 auto;">
       <div style="max-width: 620px;">
         <p style="font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #0B63CE; margin: 0 0 20px; animation: rbFade 600ms ease-out both;" data-en="Who he is">Quem é</p>
         <h2 data-en="Raulino Brasil" data-es="Raulino Brasil" style="font-size: clamp(30px, 3.6vw, 46px); font-weight: 700; line-height: 1.08; letter-spacing: -.03em; color: #16202B; margin: 0 0 26px; animation: rbRise 720ms cubic-bezier(.16,1,.3,1) 60ms both;">Raulino Brasil</h2>
         <div style="display: flex; flex-direction: column; gap: 16px; animation: rbRise 720ms cubic-bezier(.16,1,.3,1) 140ms both;">
-          <p style="font-size: 16.5px; line-height: 1.7; color: #4C5A67; margin: 0;" data-en="Guilherme Henrique Raulino Brasil is an oral and maxillofacial surgeon, born in Palhoça, Santa Catarina, specialised in highly complex facial procedures such as Deep Plane, Deep Neck, blepharoplasty and lip lifting, with planning based on each patient's individual anatomy.">Guilherme Henrique Raulino Brasil é cirurgião bucomaxilofacial, natural de Palhoça (SC), especializado em procedimentos faciais de alta complexidade, como Deep Plane, Deep Neck, blefaroplastia e lip lifting, com planejamento baseado na anatomia individual de cada paciente.</p>
-          <p style="font-size: 16.5px; line-height: 1.7; color: #4C5A67; margin: 0;" data-en-html="He practises in Palhoça and Araranguá with a multidisciplinary team, belongs to leading entities and research groups in the field and is the founder of the &lt;a href=&quot;#leozinho&quot; style=&quot;font-weight: 600;&quot;&gt;Leozinho Project&lt;/a&gt;, an initiative that has already carried out more than 200 free reconstructive facial surgeries, including a humanitarian mission in Angola.">Atua em Palhoça e Araranguá com uma equipe multidisciplinar, integra importantes entidades e grupos de pesquisa da área e é fundador do <a href="#leozinho" style="font-weight: 600;">Projeto Leozinho</a>, iniciativa que já realizou mais de 200 cirurgias reconstrutivas faciais gratuitas, incluindo uma missão humanitária em Angola.</p>
+          <p style="font-size: 16.5px; line-height: 1.7; color: #4C5A67; margin: 0;" data-en="Guilherme Henrique Raulino Brasil is an oral and maxillofacial surgeon, born in Palhoça, Santa Catarina, specialised in highly complex facial procedures such as Deep Plane, Deep Neck, blepharoplasty, lip lifting, among other facial surgeries.">Guilherme Henrique Raulino Brasil é cirurgião bucomaxilofacial, natural de Palhoça (SC), especializado em procedimentos faciais de alta complexidade, como Deep Plane, Deep Neck, blefaroplastia, lip lifting, entre outras cirurgias faciais.</p>
+          <p style="font-size: 16.5px; line-height: 1.7; color: #4C5A67; margin: 0;" data-en-html="He practises professionally in Palhoça and Araranguá, with a multidisciplinary team dedicated to comprehensive patient care. In Araranguá, he has his own hospital, where he performs surgical procedures of different levels of complexity. He is also founder of the &lt;a href=&quot;#leozinho&quot; style=&quot;font-weight: 600;&quot;&gt;Leozinho Project&lt;/a&gt;, an initiative that reflects part of his professional journey and his purpose to care for and transform lives.">Atua profissionalmente em Palhoça e Araranguá, contando com uma equipe multidisciplinar dedicada ao cuidado integral de seus pacientes. Em Araranguá, possui seu próprio hospital, onde realiza procedimentos cirúrgicos de diferentes níveis de complexidade. Também é fundador do <a href="#leozinho" style="font-weight: 600;">Projeto Leozinho</a>, iniciativa que traduz parte de sua trajetória profissional e de seu propósito de cuidar e transformar vidas.</p>
         </div>
         <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; animation: rbRise 720ms cubic-bezier(.16,1,.3,1) 220ms both;">
           <a href="https://wa.me/5548999439007" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 12px; font-size: 15.5px; font-weight: 600; color: #FFFFFF; background: #0B63CE; padding: 17px 32px; border-radius: 9999px; box-shadow: 0 12px 28px rgba(11,99,206,.32); transition: transform 150ms cubic-bezier(.16,1,.3,1), background 150ms ease-out;"><span aria-hidden="true" style="font-size: 17px;">◗</span><span data-en="Book a consultation" data-es="Reservar una consulta">Agendar consulta</span></a>
@@ -187,7 +187,7 @@
   </section>
 
   <section id="cirurgias" style="position: relative; min-height: 100svh; display: flex; align-items: center; padding: 140px 32px 96px; background: #071A33; overflow: hidden;">
-    <img src="assets/cirurgias-bg.jpg" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: left center;">
+    <img src="assets/cirurgias-bg.jpg" alt="" aria-hidden="true" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: left center;">
     <div style="position: relative; max-width: 1200px; margin: 0 auto; width: 100%;">
       <div style="max-width: 600px;">
         <p style="font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #7FB2F0; margin: 0 0 18px; animation: rbFade 600ms ease-out both;" data-en="Services">Procedimentos</p>
@@ -209,10 +209,7 @@
             <h3 data-en="Reconstructive surgery" style="font-size: 16.5px; font-weight: 600; letter-spacing: -.02em; color: #FFFFFF; margin: 0 0 3px;">Cirurgia reconstrutiva</h3>
             <p style="font-size: 13.5px; line-height: 1.45; color: rgba(255,255,255,.82); margin: 0;" data-en="Facial reconstruction in cases of deformity, facial paralysis and accident sequelae.">Reconstrução facial em casos de deformidade, paralisia facial e sequelas de acidentes.</p>
           </div>
-          <div data-proc-card="true" style="padding: 12px 16px; border-radius: 14px; transition: background 240ms ease-out, transform 240ms cubic-bezier(.16,1,.3,1), box-shadow 240ms ease-out;">
-            <h3 data-en="Oral and maxillofacial surgery" style="font-size: 16.5px; font-weight: 600; letter-spacing: -.02em; color: #FFFFFF; margin: 0 0 3px;">Cirurgia bucomaxilofacial</h3>
-            <p style="font-size: 13.5px; line-height: 1.45; color: rgba(255,255,255,.82); margin: 0;" data-en="The founding specialty: surgery of the bones and tissues of the face.">A especialidade de base: cirurgia dos ossos e tecidos da face.</p>
-          </div>
+
         </div>
       </div>
     </div>
@@ -225,19 +222,14 @@
         <h2 style="font-size: clamp(30px, 3.6vw, 46px); font-weight: 700; line-height: 1.08; letter-spacing: -.03em; color: #16202B; margin: 0 0 18px;" data-en="Before &amp;amp; After">Antes e Depois</h2>
         <p style="font-size: 16.5px; line-height: 1.65; color: #4C5A67; margin: 0;" data-en="Records shared with the patients' authorisation. Results vary with anatomy, indication and individual response, the images are not a guarantee of results.">Registros cedidos com autorização dos pacientes. Resultados variam conforme anatomia, indicação e resposta individual, as imagens não representam garantia de resultado.</p>
       </div>
-      <div data-keep="true" data-pair="true" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 40px;">
+      <div data-keep="true" data-pair="true" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 40px;">
         <figure data-reveal="true" style="margin: 0; border-radius: 20px; overflow: hidden; background: #FFFFFF; box-shadow: 0 2px 10px rgba(22,32,43,.05);">
           <video src="uploads/2abf2d3d-1c04-4552-be71-e44ce5569848.mp4" controls="controls" muted="muted" loop="loop" playsinline="playsinline" preload="metadata" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; background: #16202B;"></video>
         </figure>
         <figure data-reveal="true" data-reveal-delay="60" style="margin: 0; border-radius: 20px; overflow: hidden; background: #FFFFFF; box-shadow: 0 2px 10px rgba(22,32,43,.05);">
           <video src="uploads/534eefb6-16a9-4d6d-a7af-dbc0c47b71c8.mp4" controls="controls" muted="muted" loop="loop" playsinline="playsinline" preload="metadata" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; background: #16202B;"></video>
         </figure>
-        <figure data-reveal="true" data-reveal-delay="120" style="margin: 0; border-radius: 20px; overflow: hidden; background: #FFFFFF; box-shadow: 0 2px 10px rgba(22,32,43,.05);">
-          <video src="uploads/e41b9929-7cc1-4377-b0fd-98b4008d7eab.mp4" controls="controls" muted="muted" loop="loop" playsinline="playsinline" preload="metadata" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; background: #16202B;"></video>
-        </figure>
-        <figure data-reveal="true" data-reveal-delay="180" style="margin: 0; border-radius: 20px; overflow: hidden; background: #FFFFFF; box-shadow: 0 2px 10px rgba(22,32,43,.05);">
-          <video src="uploads/a6dff659-3546-42da-9717-b55f1658b136.mp4" controls="controls" muted="muted" loop="loop" playsinline="playsinline" preload="metadata" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; background: #16202B;"></video>
-        </figure>
+
       </div>
     </div>
   </section>
@@ -245,7 +237,7 @@
   <section id="leozinho" style="background: #071A33; padding: 96px 32px;">
     <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
       <figure data-reveal="true" style="margin: 0; position: relative; border-radius: 24px; overflow: hidden; aspect-ratio: 4 / 5;">
-        <img src="assets/hospital-leozinho-conceito.jpg" alt="Projeto conceitual do Hospital do Projeto Leozinho" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
+        <img src="assets/hospital-leozinho-conceito.jpg" alt="Projeto conceitual do Hospital do Projeto Leozinho" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
         <figcaption style="position: absolute; bottom: 0; left: 0; right: 0; font-size: 12px; font-weight: 500; color: rgba(255,255,255,.85); background: linear-gradient(180deg, transparent, rgba(7,26,51,.85)); padding: 34px 18px 14px; text-align: center;">Projeto conceitual da futura estrutura do Hospital Projeto Leozinho</figcaption>
       </figure>
       <div data-reveal="true" data-reveal-delay="80">
@@ -262,7 +254,7 @@
   </section>
 
   <section id="academy" style="position: relative; padding: 96px 32px; background: #FFFFFF;">
-    <img src="assets/academy-bg.png" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: right center;">
+    <img src="assets/academy-bg.png" alt="" aria-hidden="true" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: right center;">
     <div data-academy-fade="true" aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 38%, rgba(255,255,255,0) 68%);"></div>
     <div style="position: relative; max-width: 1200px; margin: 0 auto;">
       <div data-reveal="true" style="max-width: 640px;">
@@ -296,7 +288,7 @@
       <div data-keep="true" data-pair="true" style="display: grid; grid-template-columns: 1.25fr .85fr .95fr 1.05fr; gap: 44px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.14);">
         <div>
           <div style="margin-bottom: 18px;">
-            <img src="assets/logo-novo.png" alt="Clínica Dr. Raulino Brasil" style="height: 180px; width: auto; object-fit: contain;">
+            <img src="assets/logo-novo.png" alt="Clínica Dr. Raulino Brasil" loading="lazy" style="height: 135px; width: auto; object-fit: contain;">
           </div>
           <p data-en="Oral and maxillofacial surgery dedicated to the face, in our own facilities in Palhoça and Araranguá, Santa Catarina." style="font-size: 13px; line-height: 1.65; color: rgba(255,255,255,.78); margin: 0 0 18px;">Cirurgia e traumatologia bucomaxilofacial com atuação dedicada à face, em estrutura própria em Palhoça e Araranguá, Santa Catarina.</p>
           <a href="https://www.instagram.com/p/DbGpil2lZH3/?hl=es&img_index=4" target="_blank" rel="noopener" aria-label="Instagram" style="display: inline-flex; align-items: center; gap: 9px; font-size: 13.5px; color: rgba(255,255,255,.78);"><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" style="display: block; fill: none; stroke: currentColor; stroke-width: 1.7;"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"></rect><circle cx="12" cy="12" r="4.1"></circle><circle cx="17.1" cy="6.9" r="1.1" style="fill: currentColor; stroke: none;"></circle></svg>Instagram</a>
@@ -361,7 +353,8 @@ class Component extends DCLogic {
   rootRef = React.createRef();
   titles = {
     pt: 'Dr. Raulino Brasil | Cirurgia Facial de Alta Complexidade',
-    en: 'Dr. Raulino Brasil | Complex Facial Surgery'
+    en: 'Dr. Raulino Brasil | Complex Facial Surgery',
+    es: 'Dr. Raulino Brasil | Cirugía Facial de Alta Complejidad'
   };
   componentDidMount() {
     this.reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -422,21 +415,27 @@ class Component extends DCLogic {
 
   applyLang() {
     const root = this.rootRef.current;
-    const en = this.state.lang === 'en';
+    const lang = this.state.lang;
     if (root) {
       Array.prototype.forEach.call(root.querySelectorAll('[data-en-html]'), (el) => {
         if (el.dataset.ptHtml === undefined) el.dataset.ptHtml = el.innerHTML;
-        const next = en ? el.dataset.enHtml : el.dataset.ptHtml;
+        let next = el.dataset.ptHtml;
+        if (lang === 'en') next = el.dataset.enHtml;
+        else if (lang === 'es' && el.dataset.esHtml) next = el.dataset.esHtml;
+        else if (lang === 'es') next = el.dataset.enHtml || el.dataset.ptHtml;
         if (el.innerHTML !== next) el.innerHTML = next;
       });
       Array.prototype.forEach.call(root.querySelectorAll('[data-en]'), (el) => {
         if (el.dataset.pt === undefined) el.dataset.pt = el.textContent;
-        const next = en ? el.dataset.en : el.dataset.pt;
+        let next = el.dataset.pt;
+        if (lang === 'en') next = el.dataset.en;
+        else if (lang === 'es' && el.dataset.es) next = el.dataset.es;
+        else if (lang === 'es') next = el.dataset.en || el.dataset.pt;
         if (el.textContent !== next) el.textContent = next;
       });
     }
-    document.documentElement.lang = en ? 'en' : 'pt-BR';
-    document.title = en ? this.titles.en : this.titles.pt;
+    document.documentElement.lang = lang === 'en' ? 'en' : (lang === 'es' ? 'es' : 'pt-BR');
+    document.title = lang === 'en' ? this.titles.en : (lang === 'es' ? (this.titles.es || this.titles.en) : this.titles.pt);
   }
 
   setLang = (lang) => {

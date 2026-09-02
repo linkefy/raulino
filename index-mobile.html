@@ -43,7 +43,7 @@
       <img src="assets/logo-branco.png" alt="Raulino Brasil" style="width: 32px; height: 32px; object-fit: contain;">
     </a>
     <div style="display: flex; align-items: center; gap: 10px;">
-      <a data-tap="true" href="#" aria-label="Instagram" style="display: grid; place-items: center; width: 36px; height: 36px; border-radius: 9999px; background: rgba(255,255,255,.14); color: #FFFFFF; transition: background 150ms ease-out;" style-hover="background: rgba(255,255,255,.26);">
+      <a data-tap="true" href="https://www.instagram.com/p/DbGpil2lZH3/?hl=es&img_index=4" target="_blank" rel="noopener" aria-label="Instagram" style="display: grid; place-items: center; width: 36px; height: 36px; border-radius: 9999px; background: rgba(255,255,255,.14); color: #FFFFFF; transition: background 150ms ease-out;" style-hover="background: rgba(255,255,255,.26);">
         <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" style="display: block; fill: none; stroke: currentColor; stroke-width: 1.7;"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"></rect><circle cx="12" cy="12" r="4.1"></circle><circle cx="17.1" cy="6.9" r="1.1" style="fill: currentColor; stroke: none;"></circle></svg>
       </a>
       <div style="position: relative;">
@@ -76,7 +76,7 @@
 
   <section id="topo" style="position: relative;">
     <div style="position: relative; width: 100%; aspect-ratio: 4 / 5; overflow: hidden;">
-      <img src="assets/raulino-retrato-mobile.jpg" alt="Dr. Raulino Brasil" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 6%;">
+      <img src="assets/raulino-retrato-mobile.jpg" alt="Dr. Raulino Brasil" fetchpriority="high" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 6%;">
       <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,26,51,.35) 0%, rgba(7,26,51,0) 30%, rgba(7,26,51,0) 62%, rgba(7,26,51,.85) 100%);"></div>
       <img src="assets/logo-novo.png" alt="Clínica Dr. Raulino Brasil" style="position: absolute; top: 86%; left: 50%; transform: translate(-50%, -50%); width: 76%; max-width: 320px; height: auto; object-fit: contain; filter: drop-shadow(0 8px 24px rgba(7,26,51,.45));">
     </div>
@@ -143,11 +143,7 @@
         <div style="flex: 1;"><p style="font-size: 16px; font-weight: 600; color: #16202B; margin: 0 0 6px;">Cirurgia reconstrutiva</p><p style="font-size: 13.5px; line-height: 1.55; color: #4C5A67; margin: 0;">Reconstrução facial em deformidade, paralisia facial, síndromes raras e sequelas.</p></div>
         <span aria-hidden="true" style="color: #0B63CE; font-size: 18px;">›</span>
       </a>
-      <a data-tap="true" href="https://wa.me/5548999439007?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20cirurgia%20bucomaxilofacial." target="_blank" rel="noopener" style="display: flex; gap: 16px; align-items: flex-start; background: #F5F9FE; border-radius: 16px; padding: 20px; transition: background 150ms ease-out, border-color 150ms ease-out;" style-hover="background: #EEF4FC;">
-        <span style="font-size: 13px; font-weight: 700; color: #7FB2F0;">05</span>
-        <div style="flex: 1;"><p style="font-size: 16px; font-weight: 600; color: #16202B; margin: 0 0 6px;">Cirurgia bucomaxilofacial</p><p style="font-size: 13.5px; line-height: 1.55; color: #4C5A67; margin: 0;">A especialidade de base: cirurgia dos ossos e tecidos da face.</p></div>
-        <span aria-hidden="true" style="color: #0B63CE; font-size: 18px;">›</span>
-      </a>
+
     </div>
   </section>
 
@@ -160,14 +156,13 @@
     <div ref="{{ resultsRef }}" onScroll="{{ onResultsScroll }}" data-slider="true" style="display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 20px 16px; -webkit-overflow-scrolling: touch;">
       <video src="uploads/2abf2d3d-1c04-4552-be71-e44ce5569848.mp4" controls="controls" muted="muted" playsinline="playsinline" preload="metadata" style="flex: 0 0 82%; scroll-snap-align: start; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 18px; background: #16202B;"></video>
       <video src="uploads/534eefb6-16a9-4d6d-a7af-dbc0c47b71c8.mp4" controls="controls" muted="muted" playsinline="playsinline" preload="metadata" style="flex: 0 0 82%; scroll-snap-align: start; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 18px; background: #16202B;"></video>
-      <video src="uploads/e41b9929-7cc1-4377-b0fd-98b4008d7eab.mp4" controls="controls" muted="muted" playsinline="playsinline" preload="metadata" style="flex: 0 0 82%; scroll-snap-align: start; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 18px; background: #16202B;"></video>
-      <video src="uploads/a6dff659-3546-42da-9717-b55f1658b136.mp4" controls="controls" muted="muted" playsinline="playsinline" preload="metadata" style="flex: 0 0 82%; scroll-snap-align: start; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 18px; background: #16202B;"></video>
+
     </div>
     <p style="text-align: center; font-size: 13px; font-weight: 600; color: #7A8794; margin: 4px 0 0;">{{ resultsCounter }} / 04</p>
   </section>
 
   <section id="academy" style="position: relative; padding: 56px 20px; background: #071A33; overflow: hidden;">
-    <img src="assets/academy-bg-mobile.avif" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .35;">
+    <img src="assets/academy-bg-mobile.avif" alt="" aria-hidden="true" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .35;">
     <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,26,51,.75) 0%, rgba(7,26,51,.94) 100%);"></div>
     <div style="position: relative;">
       <p style="font-size: 12.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #7FB2F0; margin: 0 0 16px;">Raulino Brasil Academy</p>
@@ -191,7 +186,7 @@
 
   <footer style="background: #16202B; padding: 44px 20px 28px;">
     <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
-      <img src="assets/logo-branco.png" alt="" style="width: 34px; height: 34px; object-fit: contain;">
+      <img src="assets/logo-branco.png" alt="" loading="lazy" style="width: 34px; height: 34px; object-fit: contain;">
       <span style="font-size: 16px; font-weight: 700; color: #FFFFFF;">Raulino Brasil</span>
     </div>
     <p style="font-size: 13px; color: rgba(255,255,255,.78); margin: 0 0 22px;">Cirurgia Facial de Alta Complexidade</p>
